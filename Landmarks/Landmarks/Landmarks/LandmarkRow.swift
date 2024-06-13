@@ -2,34 +2,46 @@
 //  LandmarkRow.swift
 //  Landmarks
 //
-//  Created by Tejas Kashid on 06/05/24.
+//  Created by Tejas Kashid on 03/04/24.
 //
 
 import SwiftUI
 
+
 struct LandmarkRow: View {
     var landmark: Landmark
-    
+
+
     var body: some View {
         HStack {
             landmark.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            
             Text(landmark.name)
-            
+
+
             Spacer()
+
+
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                     
+            }
         }
     }
 }
 
-#Preview("Turtle Rock") {
-    Group {
+
+#Preview {
+    let landmarks = ModelData().landmarks
+    return Group {
         LandmarkRow(landmark: landmarks[0])
-        LandmarkRow(landmark: landmarks[2])
+        LandmarkRow(landmark: landmarks[1])
     }
 }
 
-#Preview("Chikoot Trail"){
-    LandmarkRow(landmark: landmarks[2])
-}
+
+
+
+
