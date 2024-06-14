@@ -58,7 +58,7 @@ struct ShareLeagueView: View {
                 }
             .foregroundStyle(.white)
             .background(Color("darkBlue000D40"))
-            .navigationBarStyle(backgroundImage: "QSDKNavigationBG", titleColor: .white)
+            .navigationBarStyle(backgroundImage: "QSDKNavigationBG", titleColor: .white, points: 0)
             .navigationTitle("Leagues")
         }
     }

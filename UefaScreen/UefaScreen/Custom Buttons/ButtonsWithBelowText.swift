@@ -15,7 +15,7 @@ struct ButtonsWithBelowText: View {
         
         VStack {
             Button(action: {
-                print("Share to apps")
+                
             }) {
                 
                 Image(imageName ?? "")

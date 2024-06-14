@@ -37,46 +37,85 @@ struct MatchCard: View {
     var body: some View {
         VStack {
             VStack {
-                HStack {
+//                HStack {
+//                    HStack{
+//                        Spacer()
+//                        ZStack{
+//                            Text("15 June at 00:30")
+//                                .font(.subheadline)
+//                                .bold()
+//                            if showToast {
+//                                RoundedRectangle(cornerRadius: 12.0)
+//                                    .fill(Color.yellow)
+//                                    .overlay {
+//                                        Text("Prediction Saved")
+//                                            .foregroundStyle(.black)
+//                                    }
+//                                    .transition(.scaleAndFade)
+//                                    .animation(.default, value: showToast)
+//                            }
+//                        }
+//                        .padding(.top, 10)
+//                        .frame(width: 150, height: 20)
+//                        .position(x: UIScreen.main.bounds.width/2)
+//                    }
+//                    Spacer()
+//                    Image(systemName: "chart.bar.xaxis")
+//                        .tint(.white)
+//                        .opacity(0.5)
+//                        .padding(.trailing,20)
+//                }
+//                .background(.cyan)
+//                .padding(.leading,UIScreen.main.bounds.width/3)
+                
+                ZStack {
                     ZStack {
                         Text("15 June at 00:30")
-                            .font(.subheadline)
+                            .font(.system(size: 15))
                             .bold()
                         if showToast {
-                                RoundedRectangle(cornerRadius: 12.0)
-                                    .fill(Color.yellow)
-                                    .overlay {
-                                        Text("Prediction Saved")
-                                            .foregroundStyle(.black)
-                                    }
-                                    .transition(.scaleAndFade)
-                                    .animation(.default, value: showToast)
+                            RoundedRectangle(cornerRadius: 12.0)
+                                .fill(Color.yellow)
+                                .overlay {
+                                    Text("Prediction Saved")
+                                        .foregroundStyle(.black)
+                                }
+                                .transition(.scaleAndFade)
+                                .animation(.default, value: showToast)
                         }
                     }
                     .padding(.top, 10)
                     .frame(width: 150, height: 20)
-                    
-                    Spacer()
-                    Image(systemName: "chart.bar.xaxis")
-                        .tint(.white)
-                        .opacity(0.5)
-                        .padding(.trailing,20)
+                    HStack{
+                        Spacer()
+                        Image(systemName: "chart.bar.xaxis")
+                            .tint(.white)
+                            .opacity(0.5)
+                            .padding(.trailing,15)
+                        
+                    }
                 }
-                .padding(.leading,UIScreen.main.bounds.width/3)
+                .padding(.top,10)
                 
-                HStack {
+                HStack() {
                     
                     //MARK: Team 1 Data
-                    VStack {
-                        Image("GER")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                        Text("Germany")
-                            .font(.headline)
+                    HStack(spacing:0){
+                        Spacer()
+                        VStack{
+                            Image("GER")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                            Text("Germany")
+                                .font(.headline)
+                                .frame(width: 100)
+                        }
+                        Spacer()
                     }
+                    .padding(.top,20)
                     
                     //MARK: Team 1 Score Field TextField
-                    HStack {
+                    HStack(spacing:20) {
                         TextField("", text: isFocused1 ? self.$blank1.max(1) : self.$textFieldText1.max(1))
                             .font(.system(size: 30).weight(.bold))
                             .frame(width: 50, height:50)
@@ -98,7 +137,7 @@ struct MatchCard: View {
                                 }
                                 
                             }
-                            .padding()
+//                            .padding(.trailing,10)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(isFocused1 ? .white : (textFieldText1.isEmpty) || (textFieldText1 == "+") ? .yellow : .white)
                         
@@ -125,21 +164,27 @@ struct MatchCard: View {
                                 }
                                 
                             }
-                            .padding()
+//                            .padding()
                             .multilineTextAlignment(.center)
                             .foregroundStyle(isFocused2 ? .white : (textFieldText2.isEmpty) || (textFieldText2 == "+") ? .yellow : .white)
-                        
                     }
                     .padding()
                     
                     //MARK: Team 2 Data
-                    VStack {
-                        Image("ITA")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                        Text("Italy")
-                            .font(.headline)
+                    HStack(spacing:0){
+                        Spacer()
+                        VStack{
+                            Image("ITA")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                            Text("Italy")
+                                .font(.headline)
+                                .frame(width: 100)
+                        }
+                        Spacer()
                     }
+                    .padding(.top,20)
+                    
                 }
                 
                 VStack {
@@ -189,21 +234,21 @@ struct MatchCard: View {
                         randomPredictionGenerator()
                     }
                                    
-                    if isSubmitted {
+                    if true {
                         VStack {
                             Divider()
                                 .background(.white)
                             
                             //MARK: First Team To Score Button
-                            
+                            Button(action: {
+                                //Implement FirstTeamToScoreView here
+                            }) {
                             HStack {
                                 Text("First team to score")
                                     .foregroundStyle(.white)
                                     .font(.system(size: 15))
                                 Spacer()
-                                Button(action: {
-                                    //Implement FirstTeamToScoreView here
-                                }) {
+                                
                                     Image(systemName: "plus.circle")
                                         .resizable()
                                         .foregroundStyle(.yellow)
@@ -218,26 +263,28 @@ struct MatchCard: View {
                                 .background(.white)
                             
                             //MARK: Booster Button
-                            
+                            Button(action: {
+                                isBoosterApplied.toggle()
+                            }) {
                             HStack {
                                 Text("Play 2x booster")
                                     .foregroundStyle(isBoosterApplied ? Color("blue0D1E62") : .white)
                                     .bold()
+                                    
                                 Spacer()
-                                Button(action: {
-                                    isBoosterApplied.toggle()
-                                }) {
                                     Image(systemName: isBoosterApplied ? "bolt.circle.fill" : "plus.circle")
                                         .resizable()
                                        .foregroundStyle(isBoosterApplied ? Color("blue0D1E62") : .yellow)
                                         .frame(width: isBoosterApplied ? 25 : 20, height: isBoosterApplied ? 25 : 20)
                                 }
+                            .padding(.vertical,5)
                             }
                             .padding(.horizontal, 15)
                             .padding(.bottom, (isFocused1 || isFocused2 && showKeyboard) ? (isSubmitted ? 50 : 0) : 0)
                             .background(isBoosterApplied ? Color.yellow : Color("blue0D1E62"))
                         }
                         .animation(.default, value: isSubmitted)
+                        .padding(.bottom,0)
                     }
                 }
                 

@@ -64,10 +64,22 @@ struct MatchPredictor: View {
                         .padding([.leading,.top],10)
                     Spacer()
                 }
+                
+                VStack {
+                    ForEach(0..<5) { _ in
+                        MatchCard()
+//                            .padding(.horizontal, 20)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(lineWidth: 2)
+                            }
+                            .padding(.horizontal, 20)
+                    }
+                }
             }
             .foregroundStyle(.white)
             .background(Color("darkBlue000D40"))
-            .navigationBarStyle(backgroundImage: "QSDKNavigationBG", titleColor: .white)
+            .navigationBarStyle(backgroundImage: "QSDKNavigationBG", titleColor: .white, points: 100)
             .onAppear{
                 generateRandomMatchDay()
             }

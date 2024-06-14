@@ -23,6 +23,7 @@
 		18B2EB032C10B2E70025AF79 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */; };
 		18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */; };
 		18B2EB092C1839CC0025AF79 /* LastFiveMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB082C1839CC0025AF79 /* LastFiveMatchesView.swift */; };
+		18C4A4D02C1B0C7E00884EBB /* GeometryReaderPract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4CF2C1B0C7E00884EBB /* GeometryReaderPract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 		18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTeamToScoreView.swift; sourceTree = "<group>"; };
 		18B2EB082C1839CC0025AF79 /* LastFiveMatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFiveMatchesView.swift; sourceTree = "<group>"; };
+		18C4A4CF2C1B0C7E00884EBB /* GeometryReaderPract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				18B2EAFE2C0F3F300025AF79 /* MatchCard.swift */,
 				18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */,
 				18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */,
+				18C4A4CF2C1B0C7E00884EBB /* GeometryReaderPract.swift */,
 				18B2EB082C1839CC0025AF79 /* LastFiveMatchesView.swift */,
 			);
 			path = "Custom Views";
@@ -221,6 +224,7 @@
 				18B2EAF52C0EE6E20025AF79 /* ShareLeagueView.swift in Sources */,
 				18B2EB012C104FEA0025AF79 /* Binding + Ext.swift in Sources */,
 				18B2EB092C1839CC0025AF79 /* LastFiveMatchesView.swift in Sources */,
+				18C4A4D02C1B0C7E00884EBB /* GeometryReaderPract.swift in Sources */,
 				18B2EAEB2C09EBE60025AF79 /* Navbar.swift in Sources */,
 				18B2EAF12C0DD3800025AF79 /* NavigationBarModifier.swift in Sources */,
 				18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */,
