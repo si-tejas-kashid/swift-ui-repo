@@ -19,12 +19,12 @@ struct FirstTeamToScoreView: View {
                 
                 VStack {
                     Text("First team to score")
-                        .bold()
+                        .font(.system(size: 12, weight: .bold))
                     HStack {
                         Text("Guess right to score")
                         Text("+2 points")
                             .padding(.leading,-5)
-                            .bold()
+                            .font(.system(size: 12, weight: .bold))
                     }
                     .font(.subheadline)
                 }
@@ -35,7 +35,7 @@ struct FirstTeamToScoreView: View {
                     
                 }) {
                     Image(systemName: "xmark")
-                        .tint(.white)
+                        .accentColor(.white)
                         .opacity(0.6)
                 }
                 .padding(.trailing,15)
@@ -56,8 +56,8 @@ struct FirstTeamToScoreView: View {
                                     .frame(width: 60, height: 60)
                                 
                                 Image(systemName: isSelected == team1 ? "checkmark.circle.fill" : "circle")
-                                    .background(.blue0D1E62)
-                                    .foregroundStyle(isSelected == team1 ? .yellow : .white.opacity(0.8))
+                                    .background(Color.blue0D1E62)
+                                    .foregroundColor(isSelected == team1 ? .yellow : .white.opacity(0.8))
                                     .frame(width: 20, height: 20)
                                     .clipShape(Circle())
                                 }
@@ -79,18 +79,18 @@ struct FirstTeamToScoreView: View {
                                     .bold()
                                     .font(.system(size: 20))
                                     .frame(width: 60, height: 60)
-                                    .overlay {
+//                                    .overlay {
                                         Circle()
                                             .stroke(lineWidth: 2)
-                                            .foregroundStyle(
+                                            .foregroundColor(
                                                 .white
                                                 .opacity(0.7)
                                             )
-                                    }
+//                                    }
                                 
                                 Image(systemName: isSelected == nil ? "checkmark.circle.fill" : "circle")
-                                    .background(.blue0D1E62)
-                                    .foregroundStyle(isSelected == nil ? .yellow : .white.opacity(0.8))
+                                    .background(Color.blue0D1E62)
+                                    .foregroundColor(isSelected == nil ? .yellow : .white.opacity(0.8))
                                     .frame(width: 20, height: 20)
                                     .clipShape(Circle())
                                 }
@@ -113,8 +113,8 @@ struct FirstTeamToScoreView: View {
                                     .frame(width: 60, height: 60)
                                 
                                 Image(systemName: isSelected == team2 ? "checkmark.circle.fill" : "circle")
-                                    .background(.blue0D1E62)
-                                    .foregroundStyle(isSelected == team2 ? .yellow : .white.opacity(0.8))
+                                    .background(Color.blue0D1E62)
+                                    .foregroundColor(isSelected == team2 ? .yellow : .white.opacity(0.8))
                                     .frame(width: 20, height: 20)
                                     .clipShape(Circle())
                                 }
@@ -129,8 +129,8 @@ struct FirstTeamToScoreView: View {
             Spacer()
         }
         .frame(width: UIScreen.main.bounds.width, height: 200)
-        .background(Color("blue0D1E62"))
-        .foregroundStyle(.white)
+        .background(Color.blue0D1E62)
+        .foregroundColor(.white)
     }
 }
 

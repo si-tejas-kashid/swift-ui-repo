@@ -26,7 +26,7 @@ struct CustomKeyboard: View {
                                 .foregroundColor(Color("grey000D40").opacity(0.8))
                                     .cornerRadius(10)
                                     .font(.title2)
-                                    .bold()
+                                    .font(.system(size: 10, weight: .bold))
                             }
                             .shadow(color: Color.black.opacity(0.14),
                                     radius: 10,
@@ -57,7 +57,7 @@ struct CustomKeyboard: View {
                             .foregroundColor(Color("grey000D40").opacity(0.8))
                             .cornerRadius(10)
                             .font(.title2)
-                            .bold()
+                            .font(.system(size: 10, weight: .bold))
                     }
                     .shadow(color: Color.black.opacity(0.14),
                             radius: 10,
@@ -82,7 +82,7 @@ struct CustomKeyboard: View {
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/4.5, alignment: .center)
             .padding(10)
-            .background(Color("greyF3F4FC"))
+            .background(Color.greyF3F4FC)
         }
     }
 #Preview {

@@ -45,7 +45,7 @@ struct LastFiveMatchesView: View {
                     }
                     
                     Rectangle()
-                        .foregroundStyle(isSelected == team1 ? .yellow : .white.opacity(0.2))
+                        .foregroundColor(isSelected == team1 ? .yellow : .white.opacity(0.2))
                         .frame(width: UIScreen.main.bounds.width/2.2, height: 1)
                 }
                 .padding(.trailing,-4.5)
@@ -61,7 +61,7 @@ struct LastFiveMatchesView: View {
                         isSelected = team2
                     }
                     Rectangle()
-                        .foregroundStyle(isSelected == team2 ? .yellow : .white.opacity(0.2))
+                        .foregroundColor(isSelected == team2 ? .yellow : .white.opacity(0.2))
                         .frame(width: UIScreen.main.bounds.width/2.2, height: 1)
                 }
                 .padding(.leading,-4.5)
@@ -73,20 +73,23 @@ struct LastFiveMatchesView: View {
                 ForEach(1..<6) {_ in
                     HStack {
                         VStack {
-                            Circle()
-                                .fill()
-                                .foregroundStyle(.red)
-                                .frame(width: 22)
-                                .overlay {
-                                    Text("L")
-                                        .font(.system(size: 12))
-                                        .padding(8)
-                                        .foregroundStyle(.white)
-                                }
+                        ZStack {
+                                Circle()
+                                    .fill()
+                                    .foregroundColor(.red)
+                                    .frame(width: 22)
+//                                    .overlay {
+                                        Text("L")
+                                            .font(.system(size: 12))
+                                            .padding(8)
+                                            .foregroundColor(.white)
+//                                    }
+                                
+                            }
                             Spacer()
                                 .frame(height: 7)
+                            .padding(.trailing,0)
                         }
-                        .padding(.trailing,0)
                         
                         VStack(alignment: .leading) {
                             HStack {
@@ -106,7 +109,7 @@ struct LastFiveMatchesView: View {
                                 Text("Friendly Matches")
                             }
                             .font(.system(size: 12))
-                            .foregroundStyle(.white.opacity(0.8))
+                            .foregroundColor(.white.opacity(0.8))
                         }
                         Spacer()
                     }
@@ -116,8 +119,8 @@ struct LastFiveMatchesView: View {
             .padding(.leading,15)
         }
         .frame(width: UIScreen.main.bounds.width, height: 360)
-        .background(Color("blue0D1E62"))
-        .foregroundStyle(.white)
+        .background(Color.blue0D1E62)
+        .foregroundColor(.white)
         .onAppear {
             isSelected = team1
         }

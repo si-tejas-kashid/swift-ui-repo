@@ -28,7 +28,7 @@ struct ButtonHorizontalAndColored: View {
             .padding(.horizontal,15)
             .padding(.vertical, 20)
             
-            .background(Color("blue0D1E62"))
+            .background(Color.blue0D1E62)
         }}
 }
 

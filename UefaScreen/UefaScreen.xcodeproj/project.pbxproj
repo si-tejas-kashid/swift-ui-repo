@@ -11,7 +11,6 @@
 		18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EADE2C09EB650025AF79 /* ContentView.swift */; };
 		18B2EAE12C09EB670025AF79 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B2EAE02C09EB670025AF79 /* ImageAssets.xcassets */; };
 		18B2EAE42C09EB670025AF79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B2EAE32C09EB670025AF79 /* Preview Assets.xcassets */; };
-		18B2EAEB2C09EBE60025AF79 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAEA2C09EBE60025AF79 /* Navbar.swift */; };
 		18B2EAED2C0DB27C0025AF79 /* ButtonsWithBelowText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAEC2C0DB27C0025AF79 /* ButtonsWithBelowText.swift */; };
 		18B2EAEF2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAEE2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift */; };
 		18B2EAF12C0DD3800025AF79 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAF02C0DD3800025AF79 /* NavigationBarModifier.swift */; };
@@ -24,6 +23,10 @@
 		18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */; };
 		18B2EB092C1839CC0025AF79 /* LastFiveMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB082C1839CC0025AF79 /* LastFiveMatchesView.swift */; };
 		18C4A4D02C1B0C7E00884EBB /* GeometryReaderPract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4CF2C1B0C7E00884EBB /* GeometryReaderPract.swift */; };
+		18C4A4D62C201E7E00884EBB /* MatchCardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4D52C201E7E00884EBB /* MatchCardVM.swift */; };
+		18C4A4DB2C2027BF00884EBB /* MatchDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4DA2C2027BF00884EBB /* MatchDay.swift */; };
+		18C4A4DD2C20288600884EBB /* MatchPredictorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4DC2C20288600884EBB /* MatchPredictorVM.swift */; };
+		18C4A4E02C206ACC00884EBB /* TextFieldFocusedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +35,6 @@
 		18B2EADE2C09EB650025AF79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18B2EAE02C09EB670025AF79 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		18B2EAE32C09EB670025AF79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		18B2EAEA2C09EBE60025AF79 /* Navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
 		18B2EAEC2C0DB27C0025AF79 /* ButtonsWithBelowText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsWithBelowText.swift; sourceTree = "<group>"; };
 		18B2EAEE2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHorizontalAndColored.swift; sourceTree = "<group>"; };
 		18B2EAF02C0DD3800025AF79 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
@@ -45,6 +47,10 @@
 		18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTeamToScoreView.swift; sourceTree = "<group>"; };
 		18B2EB082C1839CC0025AF79 /* LastFiveMatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFiveMatchesView.swift; sourceTree = "<group>"; };
 		18C4A4CF2C1B0C7E00884EBB /* GeometryReaderPract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPract.swift; sourceTree = "<group>"; };
+		18C4A4D52C201E7E00884EBB /* MatchCardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCardVM.swift; sourceTree = "<group>"; };
+		18C4A4DA2C2027BF00884EBB /* MatchDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDay.swift; sourceTree = "<group>"; };
+		18C4A4DC2C20288600884EBB /* MatchPredictorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredictorVM.swift; sourceTree = "<group>"; };
+		18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFocusedState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,12 @@
 		18B2EADB2C09EB650025AF79 /* UefaScreen */ = {
 			isa = PBXGroup;
 			children = (
+				18C4A4D92C2026AD00884EBB /* Model */,
+				18C4A4D82C20268300884EBB /* View */,
+				18C4A4D72C20265E00884EBB /* ViewModel */,
 				18B2EADC2C09EB650025AF79 /* UefaScreenApp.swift */,
 				18B2EADE2C09EB650025AF79 /* ContentView.swift */,
-				18B2EAF82C0F0C590025AF79 /* Screens */,
-				18B2EAF62C0F0C3D0025AF79 /* Navigation Bar */,
-				18B2EAF72C0F0C490025AF79 /* Custom Buttons */,
-				18B2EAFD2C0F3EE70025AF79 /* Custom Views */,
+				18C4A4DE2C206AAD00884EBB /* Helpers */,
 				18B2EB0A2C187CAC0025AF79 /* Extentions */,
 				18B2EAE02C09EB670025AF79 /* ImageAssets.xcassets */,
 				18B2EAFB2C0F31570025AF79 /* ColorAssets.xcassets */,
@@ -103,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				18B2EAF02C0DD3800025AF79 /* NavigationBarModifier.swift */,
-				18B2EAEA2C09EBE60025AF79 /* Navbar.swift */,
 			);
 			path = "Navigation Bar";
 			sourceTree = "<group>";
@@ -144,6 +149,42 @@
 				18B2EB002C104FEA0025AF79 /* Binding + Ext.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		18C4A4D72C20265E00884EBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18C4A4D52C201E7E00884EBB /* MatchCardVM.swift */,
+				18C4A4DC2C20288600884EBB /* MatchPredictorVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18C4A4D82C20268300884EBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18B2EAF82C0F0C590025AF79 /* Screens */,
+				18B2EAF62C0F0C3D0025AF79 /* Navigation Bar */,
+				18B2EAF72C0F0C490025AF79 /* Custom Buttons */,
+				18B2EAFD2C0F3EE70025AF79 /* Custom Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18C4A4D92C2026AD00884EBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18C4A4DA2C2027BF00884EBB /* MatchDay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18C4A4DE2C206AAD00884EBB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,16 +258,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C4A4DB2C2027BF00884EBB /* MatchDay.swift in Sources */,
 				18B2EAFA2C0F27EA0025AF79 /* MatchPredictor.swift in Sources */,
+				18C4A4E02C206ACC00884EBB /* TextFieldFocusedState.swift in Sources */,
 				18B2EAEF2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift in Sources */,
 				18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */,
 				18B2EB032C10B2E70025AF79 /* CustomKeyboard.swift in Sources */,
 				18B2EAF52C0EE6E20025AF79 /* ShareLeagueView.swift in Sources */,
 				18B2EB012C104FEA0025AF79 /* Binding + Ext.swift in Sources */,
+				18C4A4D62C201E7E00884EBB /* MatchCardVM.swift in Sources */,
 				18B2EB092C1839CC0025AF79 /* LastFiveMatchesView.swift in Sources */,
 				18C4A4D02C1B0C7E00884EBB /* GeometryReaderPract.swift in Sources */,
-				18B2EAEB2C09EBE60025AF79 /* Navbar.swift in Sources */,
 				18B2EAF12C0DD3800025AF79 /* NavigationBarModifier.swift in Sources */,
+				18C4A4DD2C20288600884EBB /* MatchPredictorVM.swift in Sources */,
 				18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */,
 				18B2EAED2C0DB27C0025AF79 /* ButtonsWithBelowText.swift in Sources */,
 				18B2EADD2C09EB650025AF79 /* UefaScreenApp.swift in Sources */,
@@ -371,6 +415,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,6 +444,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

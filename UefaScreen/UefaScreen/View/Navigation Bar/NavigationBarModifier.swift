@@ -48,7 +48,7 @@ struct NavigationBarModifier: ViewModifier {
                         // Handle tap
                     }) {
                         Image(systemName: "line.horizontal.3")
-                            .tint(.white)
+                            .accentColor(.white)
                     }
                 }
                 

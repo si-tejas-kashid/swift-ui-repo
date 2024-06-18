@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ShareLeagueView: View {
     var body: some View {
-        NavigationStack {
+        VStack {
 //            Navbar(navTitleText: "Leagues")
             ScrollView {
                 
@@ -22,7 +22,7 @@ struct ShareLeagueView: View {
                         Spacer(minLength: 150)
                     }
                     .frame(height: 50)
-                        .background(Color("grey000D40"))
+                    .background(Color.grey000D40)
 
                     
                 
@@ -56,8 +56,8 @@ struct ShareLeagueView: View {
                     .padding(.horizontal, 15)
                     .padding(.vertical,5)
                 }
-            .foregroundStyle(.white)
-            .background(Color("darkBlue000D40"))
+            .foregroundColor(.white)
+            .background(Color.darkBlue000D40)
             .navigationBarStyle(backgroundImage: "QSDKNavigationBG", titleColor: .white, points: 0)
             .navigationTitle("Leagues")
         }
