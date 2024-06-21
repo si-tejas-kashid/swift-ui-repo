@@ -12,6 +12,7 @@ struct MatchCardView: View {
     var matchCardDetail: Match?
     @StateObject var matchCardDetailVM = MatchPredictorVM()
     var boosterApplied: (String) -> Void
+    @EnvironmentObject var sharedData: SharedData
     
     var body: some View {
         VStack {
@@ -23,9 +24,13 @@ struct MatchCardView: View {
                             .bold()
                         if matchCardDetailVM.matchCardDetail.showToast {
                             ZStack {
-                                RoundedRectangle(cornerRadius: 12.0)
+                                RoundedRectangle(cornerRadius: 20.0)
                                     .fill(Color.yellow)
-                                Text("Prediction Saved")
+//                                Text("Prediction Saved")
+                                Text("Switched from Germany v Italy")
+                                    .font(.system(size: 17, weight: .semibold))
+                                    .fixedSize()
+                                    .padding(.all,7)
                                     .foregroundColor(.black)
                                     .transition(.scaleAndFade)
                                     .animation(.default, value: matchCardDetailVM.matchCardDetail.showToast)
@@ -71,7 +76,6 @@ struct MatchCardView: View {
                                 .lineLimit(2)
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
-                            //                                .frame(width: 100)
                         }
                         Spacer()
                     }
@@ -79,7 +83,6 @@ struct MatchCardView: View {
                     
                     //MARK: Team 1 Score Field TextField
                     HStack(spacing:20) {
-                        //                        ZStack() {
                         FocusTextField(text: matchCardDetailVM.matchCardDetail.isFocused1 ? self.$matchCardDetailVM.matchCardDetail.blank1.max(1) : self.$matchCardDetailVM.matchCardDetail.textFieldText1.max(1), isFocused: $matchCardDetailVM.matchCardDetail.isFocused1, submitAction: {
                             onSubmitActions(fromButtons: false)
                             matchCardDetailVM.matchCardDetail.isFocused1 = false
@@ -99,7 +102,6 @@ struct MatchCardView: View {
                                 .foregroundColor(matchCardDetailVM.matchCardDetail.isFocused1 ? .white : .yellow)
                                 .frame(width: 50, height:50)
                         )
-                        //                        }
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 0.5)) {
                                 self.matchCardDetailVM.matchCardDetail.isFocused1 = true
@@ -108,10 +110,8 @@ struct MatchCardView: View {
                             }
                         }
                         
-                        
-                        
                         //MARK: Team 2 Score Field TextField
-                        //                        ZStack {
+
                         FocusTextField(text: matchCardDetailVM.matchCardDetail.isFocused2 ? self.$matchCardDetailVM.matchCardDetail.blank2.max(1) : self.$matchCardDetailVM.matchCardDetail.textFieldText2.max(1), isFocused: $matchCardDetailVM.matchCardDetail.isFocused2, submitAction: {
                             onSubmitActions(fromButtons: false)
                             matchCardDetailVM.matchCardDetail.isFocused2 = false
@@ -132,7 +132,6 @@ struct MatchCardView: View {
                                 .foregroundColor(matchCardDetailVM.matchCardDetail.isFocused2 ? .white : .yellow)
                                 .frame(width: 50, height:50)
                         )
-                        //                        }
                         
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 0.5)){
@@ -190,8 +189,6 @@ struct MatchCardView: View {
                                     matchCardDetailVM.matchCardDetail.blank2 = data.team2Prediction ?? ""
                                     
                                     matchCardDetailVM.matchCardDetail.selectedButton = data.id
-                                    
-                                    print(data.id)
                                     
                                     onSubmitActions(fromButtons: true)
                                 }) {
@@ -254,7 +251,22 @@ struct MatchCardView: View {
                             //MARK: Booster Button
                             Button(action: {
                                 matchCardDetailVM.matchCardDetail.isBoosterApplied.toggle()
-                                boosterApplied(matchCardDetail?.matchid ?? String())
+                                
+//                                if matchCardDetailVM.matchCardDetail.isBoosterApplied {
+//                                    matchCardDetailVM.isBoosterApplied = matchCardDetail?.matchid ?? String()
+//                                    boosterApplied(matchCardDetail?.matchid ?? String())
+//                                } 
+//                                else {
+//                                    sharedData.isBoosterApplied = String()
+//                                }
+                                
+                                if sharedData.isBoosterApplied == matchCardDetail?.matchid {
+                                    sharedData.isBoosterApplied = String()
+                                } else {
+                                    matchCardDetailVM.isBoosterApplied = matchCardDetail?.matchid ?? String()
+                                    boosterApplied(matchCardDetail?.matchid ?? String())
+                                }
+                                
                                 withAnimation() {
                                     matchCardDetailVM.matchCardDetail.showToast = true
                                     
@@ -266,19 +278,19 @@ struct MatchCardView: View {
                                 }
                             }) {
                                 HStack {
-                                    Text(matchCardDetailVM.matchCardDetail.isBoosterApplied ? "2x booster applied" : "Play 2x booster")
-                                        .foregroundColor(matchCardDetailVM.matchCardDetail.isBoosterApplied ? Color("blue0D1E62") : .white)
+                                    Text(checkBooster() ? "2x booster applied" : "Play 2x booster")
+                                        .foregroundColor(checkBooster() ? Color("blue0D1E62") : Color.white)
                                         .bold()
                                     
                                     Spacer()
-                                    Image(systemName: matchCardDetailVM.matchCardDetail.isBoosterApplied ? "bolt.circle.fill" : "plus.circle")
+                                    Image(systemName: checkBooster() ? "bolt.circle.fill" : "plus.circle")
                                         .resizable()
                                         .foregroundColor(.yellow)
-                                        .frame(width: matchCardDetailVM.matchCardDetail.isBoosterApplied ? 22 : 20, height: matchCardDetailVM.matchCardDetail.isBoosterApplied ? 22 : 20)
+                                        .frame(width: checkBooster() ? 22 : 20, height: checkBooster() ? 22 : 20)
                                         .overlay(
                                             Circle()
-                                                .stroke(lineWidth: matchCardDetailVM.matchCardDetail.isBoosterApplied ? 3 : 4)
-                                                .foregroundColor(matchCardDetailVM.matchCardDetail.isBoosterApplied ? Color.blue0D1E62 : Color.yellow)
+                                                .stroke(lineWidth: checkBooster() ? 3 : 4)
+                                                .foregroundColor(checkBooster() ? Color.blue0D1E62 : Color.yellow)
                                         )
                                         .background(Color.blue0D1E62)
                                         .clipShape(Circle())
@@ -288,7 +300,7 @@ struct MatchCardView: View {
                             }
                             .padding(.horizontal, 15)
                             .padding(.bottom, (matchCardDetailVM.matchCardDetail.isFocused1 || matchCardDetailVM.matchCardDetail.isFocused2 && matchCardDetailVM.matchCardDetail.showKeyboard) ? (matchCardDetailVM.matchCardDetail.isSubmitted ? 50 : 0) : 0)
-                            .background(matchCardDetailVM.matchCardDetail.isBoosterApplied ? Color.yellow : Color.blue0D1E62)
+                            .background(checkBooster() ? Color.yellow : Color.blue0D1E62)
                         }
                         .animation(.default, value: matchCardDetailVM.matchCardDetail.isSubmitted)
                         .padding(.bottom,0)
@@ -344,6 +356,10 @@ struct MatchCardView: View {
     //            matchCardDetailVM.matchCardDetail.buttonsData.append(newData)
     //        }
     //    }
+    
+    func checkBooster() -> Bool {
+        return sharedData.isBoosterApplied == matchCardDetail?.matchid
+    }
     
     func onSubmitActions(fromButtons: Bool){
         if !fromButtons {
@@ -437,4 +453,5 @@ extension AnyTransition {
     MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in
         
     })
+    .environmentObject(SharedData())
 }

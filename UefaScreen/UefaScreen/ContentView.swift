@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        MatchPredictorView(matchdays: allMatches)
-        MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in
-            
-        })
+        MatchPredictorView(matchdays: allMatches)
+//        MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in })
     }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}

@@ -11,6 +11,7 @@ struct MatchPredictorView: View {
     
     var matchdays: [MatchDays]?
     @StateObject var matchPredictorVM = MatchPredictorVM()
+    @EnvironmentObject var sharedData: SharedData
 //    var allMatches: [MatchDays] {
 //        (matchdays ?? []).flatMap{$0}
 //    }
@@ -94,13 +95,13 @@ struct MatchPredictorView: View {
                                 //                                    matchPredictorVM.isBoosterApplied = boosterOn
                                 //                                })
                                 MatchCardView(matchCardDetail: match, boosterApplied: { boosterOnMatchId in
-                                    matchPredictorVM.isBoosterApplied = boosterOnMatchId
+                                    sharedData.isBoosterApplied = boosterOnMatchId
                                 })
                                 .clipShape(RoundedRectangle(cornerRadius: 15))
                                 .overlay (
                                     RoundedRectangle(cornerRadius: 15)
                                         .stroke(lineWidth: 2)
-                                        .foregroundColor(match.matchid == matchPredictorVM.isBoosterApplied ? .yellow : Color.clear)
+                                        .foregroundColor(match.matchid == sharedData.isBoosterApplied ? .yellow : Color.clear)
                                 )
                                 .padding(10)
                             }
@@ -126,4 +127,5 @@ struct MatchPredictorView: View {
 
 #Preview {
     MatchPredictorView(matchdays: allMatches)
+        .environmentObject(SharedData())
 }

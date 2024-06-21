@@ -39,6 +39,7 @@ struct MatchDays: Codable, Identifiable {
     let matchDayID: Int?
     let points: Int?
     let matches: [Match]?
+    var isBoosterApplied: String?
     
     enum CodingKeys: String, CodingKey {
         case matchDayID = "matchday_id"
@@ -47,7 +48,8 @@ struct MatchDays: Codable, Identifiable {
 }
 
 // MARK: - Match
-struct Match: Codable {
+struct Match: Codable, Identifiable {
+    var id = UUID()
     let matchid: String?
     let matchDate: String?
     let team1Name: String?
@@ -69,7 +71,7 @@ struct Match: Codable {
 
 // MARK: - PopularPrediction
 struct PopularPrediction: Codable, Identifiable {
-    var id: UUID{ UUID()}
+    var id = UUID()
     let team1Prediction, team2Prediction, predictionPercentage: String?
 
     enum CodingKeys: String, CodingKey {
