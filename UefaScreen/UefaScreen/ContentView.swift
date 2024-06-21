@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MatchPredictor()
+//        MatchPredictorView(matchdays: allMatches)
+        MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in
+            
+        })
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

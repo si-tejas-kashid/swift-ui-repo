@@ -14,7 +14,7 @@ struct ButtonHorizontalAndColored: View {
     
     var body: some View {
         Button(action: {
-            print("Copy code")
+//            print("Copy code")
         }) {
             HStack {
                 Text(buttonText ?? "")

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1851CC9E2C23097800FFB3F0 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851CC9D2C23097800FFB3F0 /* RoundedCorner.swift */; };
 		18B2EADD2C09EB650025AF79 /* UefaScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EADC2C09EB650025AF79 /* UefaScreenApp.swift */; };
 		18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EADE2C09EB650025AF79 /* ContentView.swift */; };
 		18B2EAE12C09EB670025AF79 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B2EAE02C09EB670025AF79 /* ImageAssets.xcassets */; };
@@ -15,9 +16,9 @@
 		18B2EAEF2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAEE2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift */; };
 		18B2EAF12C0DD3800025AF79 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAF02C0DD3800025AF79 /* NavigationBarModifier.swift */; };
 		18B2EAF52C0EE6E20025AF79 /* ShareLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAF42C0EE6E20025AF79 /* ShareLeagueView.swift */; };
-		18B2EAFA2C0F27EA0025AF79 /* MatchPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAF92C0F27EA0025AF79 /* MatchPredictor.swift */; };
+		18B2EAFA2C0F27EA0025AF79 /* MatchPredictorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAF92C0F27EA0025AF79 /* MatchPredictorView.swift */; };
 		18B2EAFC2C0F31570025AF79 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B2EAFB2C0F31570025AF79 /* ColorAssets.xcassets */; };
-		18B2EAFF2C0F3F300025AF79 /* MatchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAFE2C0F3F300025AF79 /* MatchCard.swift */; };
+		18B2EAFF2C0F3F300025AF79 /* MatchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EAFE2C0F3F300025AF79 /* MatchCardView.swift */; };
 		18B2EB012C104FEA0025AF79 /* Binding + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB002C104FEA0025AF79 /* Binding + Ext.swift */; };
 		18B2EB032C10B2E70025AF79 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */; };
 		18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */; };
@@ -27,9 +28,12 @@
 		18C4A4DB2C2027BF00884EBB /* MatchDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4DA2C2027BF00884EBB /* MatchDay.swift */; };
 		18C4A4DD2C20288600884EBB /* MatchPredictorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4DC2C20288600884EBB /* MatchPredictorVM.swift */; };
 		18C4A4E02C206ACC00884EBB /* TextFieldFocusedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */; };
+		18C612FD2C231C31002D1B4C /* MatchData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18C612FC2C231C31002D1B4C /* MatchData.json */; };
+		18C612FF2C24718C002D1B4C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C612FE2C24718C002D1B4C /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1851CC9D2C23097800FFB3F0 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		18B2EAD92C09EB650025AF79 /* UefaScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UefaScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B2EADC2C09EB650025AF79 /* UefaScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UefaScreenApp.swift; sourceTree = "<group>"; };
 		18B2EADE2C09EB650025AF79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,9 +43,9 @@
 		18B2EAEE2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHorizontalAndColored.swift; sourceTree = "<group>"; };
 		18B2EAF02C0DD3800025AF79 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		18B2EAF42C0EE6E20025AF79 /* ShareLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLeagueView.swift; sourceTree = "<group>"; };
-		18B2EAF92C0F27EA0025AF79 /* MatchPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredictor.swift; sourceTree = "<group>"; };
+		18B2EAF92C0F27EA0025AF79 /* MatchPredictorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredictorView.swift; sourceTree = "<group>"; };
 		18B2EAFB2C0F31570025AF79 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
-		18B2EAFE2C0F3F300025AF79 /* MatchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCard.swift; sourceTree = "<group>"; };
+		18B2EAFE2C0F3F300025AF79 /* MatchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCardView.swift; sourceTree = "<group>"; };
 		18B2EB002C104FEA0025AF79 /* Binding + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding + Ext.swift"; sourceTree = "<group>"; };
 		18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 		18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTeamToScoreView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		18C4A4DA2C2027BF00884EBB /* MatchDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDay.swift; sourceTree = "<group>"; };
 		18C4A4DC2C20288600884EBB /* MatchPredictorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredictorVM.swift; sourceTree = "<group>"; };
 		18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFocusedState.swift; sourceTree = "<group>"; };
+		18C612FC2C231C31002D1B4C /* MatchData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MatchData.json; sourceTree = "<group>"; };
+		18C612FE2C24718C002D1B4C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		18B2EADB2C09EB650025AF79 /* UefaScreen */ = {
 			isa = PBXGroup;
 			children = (
+				18C612F82C231BE3002D1B4C /* StaticData */,
 				18C4A4D92C2026AD00884EBB /* Model */,
 				18C4A4D82C20268300884EBB /* View */,
 				18C4A4D72C20265E00884EBB /* ViewModel */,
@@ -126,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				18B2EAF42C0EE6E20025AF79 /* ShareLeagueView.swift */,
-				18B2EAF92C0F27EA0025AF79 /* MatchPredictor.swift */,
+				18B2EAF92C0F27EA0025AF79 /* MatchPredictorView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -134,7 +141,7 @@
 		18B2EAFD2C0F3EE70025AF79 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				18B2EAFE2C0F3F300025AF79 /* MatchCard.swift */,
+				18B2EAFE2C0F3F300025AF79 /* MatchCardView.swift */,
 				18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */,
 				18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */,
 				18C4A4CF2C1B0C7E00884EBB /* GeometryReaderPract.swift */,
@@ -175,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				18C4A4DA2C2027BF00884EBB /* MatchDay.swift */,
+				18C612FE2C24718C002D1B4C /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,8 +191,17 @@
 			isa = PBXGroup;
 			children = (
 				18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */,
+				1851CC9D2C23097800FFB3F0 /* RoundedCorner.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		18C612F82C231BE3002D1B4C /* StaticData */ = {
+			isa = PBXGroup;
+			children = (
+				18C612FC2C231C31002D1B4C /* MatchData.json */,
+			);
+			path = StaticData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B2EAE42C09EB670025AF79 /* Preview Assets.xcassets in Resources */,
+				18C612FD2C231C31002D1B4C /* MatchData.json in Resources */,
 				18B2EAFC2C0F31570025AF79 /* ColorAssets.xcassets in Resources */,
 				18B2EAE12C09EB670025AF79 /* ImageAssets.xcassets in Resources */,
 			);
@@ -259,7 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C4A4DB2C2027BF00884EBB /* MatchDay.swift in Sources */,
-				18B2EAFA2C0F27EA0025AF79 /* MatchPredictor.swift in Sources */,
+				18B2EAFA2C0F27EA0025AF79 /* MatchPredictorView.swift in Sources */,
+				18C612FF2C24718C002D1B4C /* ModelData.swift in Sources */,
 				18C4A4E02C206ACC00884EBB /* TextFieldFocusedState.swift in Sources */,
 				18B2EAEF2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift in Sources */,
 				18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */,
@@ -270,11 +289,12 @@
 				18B2EB092C1839CC0025AF79 /* LastFiveMatchesView.swift in Sources */,
 				18C4A4D02C1B0C7E00884EBB /* GeometryReaderPract.swift in Sources */,
 				18B2EAF12C0DD3800025AF79 /* NavigationBarModifier.swift in Sources */,
+				1851CC9E2C23097800FFB3F0 /* RoundedCorner.swift in Sources */,
 				18C4A4DD2C20288600884EBB /* MatchPredictorVM.swift in Sources */,
 				18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */,
 				18B2EAED2C0DB27C0025AF79 /* ButtonsWithBelowText.swift in Sources */,
 				18B2EADD2C09EB650025AF79 /* UefaScreenApp.swift in Sources */,
-				18B2EAFF2C0F3F300025AF79 /* MatchCard.swift in Sources */,
+				18B2EAFF2C0F3F300025AF79 /* MatchCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,4 +3,54 @@
    uuid = "3C88C225-A47F-41F3-9352-857A42C30A31"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "266E0678-0BEE-433D-AFB9-910BBBD47AB7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
+            landmarkName = "onSubmitActions(fromButtons:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "266E0678-0BEE-433D-AFB9-910BBBD47AB7 - 31d2bb3d52bc5039"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.MatchCardView.onSubmitActions(fromButtons: Swift.Bool) -&gt; ()"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/View/Custom%20Views/MatchCardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "380"
+                  endingLineNumber = "380"
+                  offsetFromSymbolStart = "2512">
+               </Location>
+               <Location
+                  uuid = "266E0678-0BEE-433D-AFB9-910BBBD47AB7 - 391970cce2a1e641"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (UefaScreen.PopularPrediction) -&gt; Swift.Bool in UefaScreen.MatchCardView.onSubmitActions(fromButtons: Swift.Bool) -&gt; ()"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/View/Custom%20Views/MatchCardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "381"
+                  endingLineNumber = "381"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

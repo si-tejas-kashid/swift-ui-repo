@@ -25,8 +25,7 @@ struct CustomKeyboard: View {
                                 .background(Color.white)
                                 .foregroundColor(Color("grey000D40").opacity(0.8))
                                     .cornerRadius(10)
-                                    .font(.title2)
-                                    .font(.system(size: 10, weight: .bold))
+                                    .font(.system(size: 25, weight: .bold))
                             }
                             .shadow(color: Color.black.opacity(0.14),
                                     radius: 10,
@@ -35,7 +34,7 @@ struct CustomKeyboard: View {
                             .frame(maxWidth: .infinity)
                         }
                     }
-                    .padding(.horizontal,10)
+                    .padding(.horizontal,20)
                 }
                 
                 
@@ -56,8 +55,7 @@ struct CustomKeyboard: View {
                             .background(Color.white)
                             .foregroundColor(Color("grey000D40").opacity(0.8))
                             .cornerRadius(10)
-                            .font(.title2)
-                            .font(.system(size: 10, weight: .bold))
+                            .font(.system(size: 25, weight: .bold))
                     }
                     .shadow(color: Color.black.opacity(0.14),
                             radius: 10,

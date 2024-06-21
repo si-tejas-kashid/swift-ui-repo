@@ -9,4 +9,9 @@ import Foundation
 
 class MatchPredictorVM: ObservableObject {
     @Published var matchDay = MatchDay()
+    @Published var matchCardDetail = MatchCard()
+    
+    @Published var selectedMatchDay: Int?
+    @Published var matchDays: [MatchDay] = []
+    @Published var isBoosterApplied: String?
 }
