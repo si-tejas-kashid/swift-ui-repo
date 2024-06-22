@@ -11,8 +11,9 @@ struct MatchCardView: View {
     
     var matchCardDetail: Match?
     @StateObject var matchCardDetailVM = MatchPredictorVM()
-    var boosterApplied: (String) -> Void
     @EnvironmentObject var sharedData: SharedData
+    var showFirstTeamView: (Bool, String, String, String) -> ()
+    var matchIDFstTmVw = "123"
     
     var body: some View {
         VStack {
@@ -26,11 +27,12 @@ struct MatchCardView: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20.0)
                                     .fill(Color.yellow)
-//                                Text("Prediction Saved")
-                                Text("Switched from Germany v Italy")
-                                    .font(.system(size: 17, weight: .semibold))
+                                Text("Action Saved")
+                                //                                Text("Switched from Germany v Italy")
+                                    .font(.system(size: 14, weight: .semibold))
                                     .fixedSize()
-                                    .padding(.all,7)
+                                    .padding(.vertical,5)
+                                    .padding(.horizontal,10)
                                     .foregroundColor(.black)
                                     .transition(.scaleAndFade)
                                     .animation(.default, value: matchCardDetailVM.matchCardDetail.showToast)
@@ -111,7 +113,7 @@ struct MatchCardView: View {
                         }
                         
                         //MARK: Team 2 Score Field TextField
-
+                        
                         FocusTextField(text: matchCardDetailVM.matchCardDetail.isFocused2 ? self.$matchCardDetailVM.matchCardDetail.blank2.max(1) : self.$matchCardDetailVM.matchCardDetail.textFieldText2.max(1), isFocused: $matchCardDetailVM.matchCardDetail.isFocused2, submitAction: {
                             onSubmitActions(fromButtons: false)
                             matchCardDetailVM.matchCardDetail.isFocused2 = false
@@ -213,35 +215,42 @@ struct MatchCardView: View {
                             }
                             .padding(.top,1)
                             .padding(.bottom, (matchCardDetailVM.matchCardDetail.isFocused1 || matchCardDetailVM.matchCardDetail.isFocused2 && matchCardDetailVM.matchCardDetail.showKeyboard) ? (matchCardDetailVM.matchCardDetail.isSubmitted ? 10 : 140) : 10)
-                            
-                            
-                            //                                Spacer()
                         }
                     }
                     
-                    if matchCardDetailVM.matchCardDetail.isSubmitted {
+//                    if matchCardDetailVM.matchCardDetail.isSubmitted {
+                    if true{
                         VStack(spacing:0) {
                             Divider()
                                 .background(Color.white)
                             
                             //MARK: First Team To Score Button
                             Button(action: {
-                                //Implement FirstTeamToScoreView here
+                                showFirstTeamView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String(), matchCardDetail?.matchid ?? String())
                             }) {
                                 HStack {
-                                    Text("First team to score")
+                                    Text(matchCardDetail?.matchid == matchIDFstTmVw ? "You Predicted:" : "First team to score")
                                         .foregroundColor(.white)
                                         .font(.system(size: 15))
+                                    Text(matchCardDetailVM.matchCardDetail.firstTeamSelected ? matchCardDetailVM.matchCardDetail.firstTeamToScore : "")
+                                        .font(.system(size: 15, weight:.bold))
                                     Spacer()
                                     
-                                    Image(systemName: "plus.circle")
-                                        .resizable()
-                                        .foregroundColor(.yellow)
-                                        .frame(width: 20, height: 20)
+                                    if matchCardDetailVM.matchCardDetail.firstTeamSelected {
+                                        Image(matchCardDetailVM.matchCardDetail.firstTeamSelected ? matchCardDetailVM.matchCardDetail.firstTeamToScore.lowercased() : "")
+                                            .resizable()
+                                            .frame(width: 28, height: 28)
+                                            .clipShape(Circle())
+                                    } else {
+                                        Image(systemName: matchCardDetailVM.matchCardDetail.firstTeamSelected ? matchCardDetailVM.matchCardDetail.firstTeamToScore.lowercased() : "plus.circle")
+                                            .resizable()
+                                            .foregroundColor(.yellow)
+                                            .frame(width: 20, height: 20)
+                                    }
                                 }
                             }
                             .padding(.horizontal, 15)
-                            .padding(.vertical,5)
+                            .padding(.vertical,10)
                             .background(Color.blue0D1E62)
                             
                             Divider()
@@ -252,30 +261,21 @@ struct MatchCardView: View {
                             Button(action: {
                                 matchCardDetailVM.matchCardDetail.isBoosterApplied.toggle()
                                 
-//                                if matchCardDetailVM.matchCardDetail.isBoosterApplied {
-//                                    matchCardDetailVM.isBoosterApplied = matchCardDetail?.matchid ?? String()
-//                                    boosterApplied(matchCardDetail?.matchid ?? String())
-//                                } 
-//                                else {
-//                                    sharedData.isBoosterApplied = String()
-//                                }
-                                
                                 if sharedData.isBoosterApplied == matchCardDetail?.matchid {
                                     sharedData.isBoosterApplied = String()
                                 } else {
-                                    matchCardDetailVM.isBoosterApplied = matchCardDetail?.matchid ?? String()
-                                    boosterApplied(matchCardDetail?.matchid ?? String())
-                                }
-                                
-                                withAnimation() {
-                                    matchCardDetailVM.matchCardDetail.showToast = true
-                                    
-                                    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1) {
-                                        withAnimation {
-                                            matchCardDetailVM.matchCardDetail.showToast = false
+                                    sharedData.isBoosterApplied = matchCardDetail?.matchid ?? String()
+                                    withAnimation() {
+                                        matchCardDetailVM.matchCardDetail.showToast = true
+                                        
+                                        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.5) {
+                                            withAnimation {
+                                                matchCardDetailVM.matchCardDetail.showToast = false
+                                            }
                                         }
                                     }
                                 }
+                                
                             }) {
                                 HStack {
                                     Text(checkBooster() ? "2x booster applied" : "Play 2x booster")
@@ -299,7 +299,7 @@ struct MatchCardView: View {
                                 .padding(.vertical,10)
                             }
                             .padding(.horizontal, 15)
-                            .padding(.bottom, (matchCardDetailVM.matchCardDetail.isFocused1 || matchCardDetailVM.matchCardDetail.isFocused2 && matchCardDetailVM.matchCardDetail.showKeyboard) ? (matchCardDetailVM.matchCardDetail.isSubmitted ? 50 : 0) : 0)
+                            .padding(.bottom, (matchCardDetailVM.matchCardDetail.isFocused1 || matchCardDetailVM.matchCardDetail.isFocused2 && matchCardDetailVM.matchCardDetail.showKeyboard) ? (matchCardDetailVM.matchCardDetail.isSubmitted ? 40 : 0) : 0)
                             .background(checkBooster() ? Color.yellow : Color.blue0D1E62)
                         }
                         .animation(.default, value: matchCardDetailVM.matchCardDetail.isSubmitted)
@@ -401,7 +401,7 @@ struct MatchCardView: View {
             
         }
         
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.5) {
             withAnimation {
                 matchCardDetailVM.matchCardDetail.showToast = false
             }
@@ -450,8 +450,8 @@ extension AnyTransition {
 }
 
 #Preview {
-    MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in
+    MatchCardView(matchCardDetail: allMatches.first?.matches?.first, showFirstTeamView: {_,_,_,_  in
         
     })
-    .environmentObject(SharedData())
+        .environmentObject(SharedData())
 }

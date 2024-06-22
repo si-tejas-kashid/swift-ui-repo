@@ -12,6 +12,11 @@ struct MatchDay: Identifiable {
     var MatchDayNumber: String?
     var points: Int?
     
+    var isSheetPresented = false
+    var team1FstTmVw = String()
+    var team2FstTmVw = String()
+    var matchIDFstTmVw = String()
+    
     func generateRandomMatchDay() -> [MatchDay] {
         var matchDays: [MatchDay] = []
         for i in 1..<4 {
@@ -102,7 +107,9 @@ struct MatchCard: Identifiable {
     var showKeyboard: Bool = false
     var isBoosterApplied: Bool = false
     var savedTeam1Pred: String = ""
-    var savedTeam2Pred: String = ""
+    var savedTeam2Pred: String = ""  
+    var firstTeamSelected: Bool = false
+    var firstTeamToScore: String = ""
 }
 
 struct buttonData: Identifiable {

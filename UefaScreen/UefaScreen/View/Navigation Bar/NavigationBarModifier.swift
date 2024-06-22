@@ -19,11 +19,12 @@ struct NavigationBarModifier: ViewModifier {
 
         let coloredAppearance = UINavigationBarAppearance()
         
-        if let imageName = backgroundImage, let image = UIImage(named: imageName) {
-            let navbarImage = image.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
-            coloredAppearance.backgroundImage = navbarImage
-        }
+//        if let imageName = backgroundImage, let image = UIImage(named: imageName) {
+//            let navbarImage = image.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
+//            coloredAppearance.backgroundImage = navbarImage
+//        }
         
+        coloredAppearance.backgroundImage = UIImage(named: backgroundImage ?? String())
         
         coloredAppearance.titleTextAttributes = [.foregroundColor: titleColor ?? .white]
         coloredAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor ?? .white]

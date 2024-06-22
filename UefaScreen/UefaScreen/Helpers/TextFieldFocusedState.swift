@@ -110,6 +110,8 @@ struct FocusTextField: UIViewRepresentable {
 
     func makeUIView(context: Context) -> UITextField {
         let textField = UITextField()
+        textField.inputView = UIView() // hiding keyboard
+        textField.inputAccessoryView = UIView() // hiding keyboard toolbar
         textField.delegate = context.coordinator
         textField.textAlignment = .center
         textField.keyboardType = .default
@@ -118,14 +120,16 @@ struct FocusTextField: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UITextField, context: Context) {
-        uiView.text = text
-        uiView.font = font
-        uiView.textColor = textColor
-        if isFocused {
-            uiView.becomeFirstResponder()
-        } else {
-            uiView.resignFirstResponder()
+        DispatchQueue.main.async {
+            uiView.text = text
+            uiView.font = font
+            uiView.textColor = textColor
         }
+            if isFocused {
+                uiView.becomeFirstResponder()
+            } else {
+                uiView.resignFirstResponder()
+            }
     }
 
     func makeCoordinator() -> Coordinator {

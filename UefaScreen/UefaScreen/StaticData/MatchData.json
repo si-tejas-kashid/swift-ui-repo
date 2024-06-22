@@ -37,23 +37,18 @@
             {
                 "matchid" : "124",
                 "match_date" : "15 June at 00:30",
-                "team1_name" : "Germany",
+                "team1_name" : "Austria",
                 "team1_shortname" : "GER",
                 "team2_name" : "Italy",
                 "team2_shortname" : "ITA",
                 "popular_predictions" : [
                     {
-                        "team1_prediction" : "2",
-                        "team2_prediction" : "0",
-                        "prediction_percentage" : "67"
-                    },
-                    {
                         "team1_prediction" : "3",
-                        "team2_prediction" : "0",
+                        "team2_prediction" : "5",
                         "prediction_percentage" : "24"
                     },
                     {
-                        "team1_prediction" : "2",
+                        "team1_prediction" : "1",
                         "team2_prediction" : "3",
                         "prediction_percentage" : "16"
                     }
@@ -68,18 +63,8 @@
                 "team2_shortname" : "ITA",
                 "popular_predictions" : [
                     {
-                        "team1_prediction" : "2",
+                        "team1_prediction" : "0",
                         "team2_prediction" : "0",
-                        "prediction_percentage" : "25"
-                    },
-                    {
-                        "team1_prediction" : "3",
-                        "team2_prediction" : "0",
-                        "prediction_percentage" : "36"
-                    },
-                    {
-                        "team1_prediction" : "2",
-                        "team2_prediction" : "3",
                         "prediction_percentage" : "16"
                     }
                 ]
