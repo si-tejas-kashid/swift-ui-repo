@@ -7,12 +7,15 @@
 
 import Foundation
 
-@MainActor
-final class MatchPredictorVM: ObservableObject {
+@MainActor class MatchPredictorVM: ObservableObject {
     @Published var matchDay = MatchDay()
     @Published var matchCardDetail = MatchCard()
     
-    @Published var selectedMatchDay: Int?
+    // @Published var selectedMatchDay: Int?
     @Published var matchDays: [MatchDay] = []
     @Published var isBoosterApplied: String?
+    
+    // Ajinkya
+    @Published var allMatchDaysArr: [MatchDays] = allMatches
+    @Published var selectedMatchDay: Int?
 }

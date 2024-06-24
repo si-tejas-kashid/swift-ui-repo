@@ -10,6 +10,7 @@ import SwiftUI
 struct MatchCardView: View {
     
     var matchCardDetail: Match?
+    
     @StateObject var matchCardDetailVM = MatchPredictorVM()
     @EnvironmentObject var sharedData: SharedData
     var showFirstTeamView: (Bool, String, String, String) -> ()

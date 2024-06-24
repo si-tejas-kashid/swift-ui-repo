@@ -181,6 +181,10 @@ struct MatchPredictorView: View {
                 .animation(.easeInOut, value: matchPredictorVM.matchDay.isFirstTeamSheetPresented)
             }
         }
+        .onAppear {
+            print("All Matches Data: \(allMatches)")
+            //print("Match Days: \(matchdays)")
+        }
         .navigationViewStyle(.stack)
     }
 }

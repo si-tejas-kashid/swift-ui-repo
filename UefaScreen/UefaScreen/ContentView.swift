@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MatchPredictorView(matchdays: allMatches)
+        // MatchPredictorView(matchdays: allMatches)
+        MatchPredictorViewEnhanced()
 //        StickyViewTrial(matchdays: allMatches)
         
 //        MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in })
