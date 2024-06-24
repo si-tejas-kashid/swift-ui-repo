@@ -7,7 +7,8 @@
 
 import Foundation
 
-class MatchPredictorVM: ObservableObject {
+@MainActor
+final class MatchPredictorVM: ObservableObject {
     @Published var matchDay = MatchDay()
     @Published var matchCardDetail = MatchCard()
     

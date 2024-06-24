@@ -13,7 +13,10 @@ struct MatchCardView: View {
     @StateObject var matchCardDetailVM = MatchPredictorVM()
     @EnvironmentObject var sharedData: SharedData
     var showFirstTeamView: (Bool, String, String, String) -> ()
-    var matchIDFstTmVw = "123"
+    var showLastFiveView: (Bool, String, String) -> ()
+    @Binding var firstTeamToScore: String
+    @Binding var matchIDFstTmVw: String
+    @State var hasChangesFirstTeamValue: Bool = false
     
     var body: some View {
         VStack {
@@ -45,7 +48,7 @@ struct MatchCardView: View {
                     HStack{
                         Spacer()
                         Button(action: {
-                            
+                            showLastFiveView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String())
                         }) {
                             Image(systemName: "chart.bar.xaxis")
                                 .resizable()
@@ -76,8 +79,9 @@ struct MatchCardView: View {
                                 )
                             Text(matchCardDetail?.team1Name ?? "")
                                 .lineLimit(2)
-                                .font(.headline)
+                                .font(.system(size: 15, weight: .medium))
                                 .multilineTextAlignment(.center)
+                                .padding(.top,5)
                         }
                         Spacer()
                     }
@@ -142,9 +146,6 @@ struct MatchCardView: View {
                                 matchCardDetailVM.matchCardDetail.showKeyboard = true
                             }
                         }
-                        //                            .padding()
-                        //                            .multilineTextAlignment(.center)
-                        //                            .foregroundColor(matchCardDetailVM.matchCardDetail.isFocused2 ? .white : (matchCardDetailVM.matchCardDetail.textFieldText2.isEmpty) || (matchCardDetailVM.matchCardDetail.textFieldText2 == "+") ? .yellow : .white)
                     }
                     .padding()
                     
@@ -164,8 +165,9 @@ struct MatchCardView: View {
                                 )
                             Text(matchCardDetail?.team2Name ?? "")
                                 .lineLimit(2)
-                                .font(.headline)
+                                .font(.system(size: 15, weight: .medium))
                                 .multilineTextAlignment(.center)
+                                .padding(.top,5)
                         }
                         Spacer()
                     }
@@ -218,39 +220,56 @@ struct MatchCardView: View {
                         }
                     }
                     
-//                    if matchCardDetailVM.matchCardDetail.isSubmitted {
-                    if true{
+                    if matchCardDetailVM.matchCardDetail.isSubmitted {
+//                    if true{
                         VStack(spacing:0) {
                             Divider()
                                 .background(Color.white)
                             
                             //MARK: First Team To Score Button
                             Button(action: {
+//                                print(matchCardDetailVM.matchDay.matchIDFstTmVw)
                                 showFirstTeamView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String(), matchCardDetail?.matchid ?? String())
+//                                    print(matchCardDetailVM.matchDay.matchIDFstTmVw)
+//                                    print(firstTeamToScore)
                             }) {
                                 HStack {
-                                    Text(matchCardDetail?.matchid == matchIDFstTmVw ? "You Predicted:" : "First team to score")
+                                    Text(hasChangesFirstTeamValue ? "You Predicted:" : "First team to score")
                                         .foregroundColor(.white)
                                         .font(.system(size: 15))
-                                    Text(matchCardDetailVM.matchCardDetail.firstTeamSelected ? matchCardDetailVM.matchCardDetail.firstTeamToScore : "")
+                                    Text(hasChangesFirstTeamValue ? firstTeamToScore : "")
                                         .font(.system(size: 15, weight:.bold))
                                     Spacer()
                                     
-                                    if matchCardDetailVM.matchCardDetail.firstTeamSelected {
-                                        Image(matchCardDetailVM.matchCardDetail.firstTeamSelected ? matchCardDetailVM.matchCardDetail.firstTeamToScore.lowercased() : "")
+                                    if hasChangesFirstTeamValue {
+                                        Image(hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "")
                                             .resizable()
-                                            .frame(width: 28, height: 28)
+                                            .frame(width: 25, height: 25)
                                             .clipShape(Circle())
                                     } else {
-                                        Image(systemName: matchCardDetailVM.matchCardDetail.firstTeamSelected ? matchCardDetailVM.matchCardDetail.firstTeamToScore.lowercased() : "plus.circle")
+                                        Image(systemName: hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "plus.circle")
                                             .resizable()
                                             .foregroundColor(.yellow)
                                             .frame(width: 20, height: 20)
                                     }
                                 }
+                                .onChange(of: firstTeamToScore) {newValue in
+                                    print(matchIDFstTmVw)
+//                                    print(matchCardDetail?.matchid ?? "")
+//                                    print(hasChangesFirstTeamValue)     //this variable was true even before assigned true after it comes to the rest views other than the one which is selected
+                                    
+                                    if Int(matchIDFstTmVw) == Int(matchCardDetail?.matchid ?? "") {
+                                        print(matchIDFstTmVw)
+                                         print(matchCardDetail?.matchid ?? "")
+                                        hasChangesFirstTeamValue = true
+                                        
+                                    } else {
+//                                        hasChangesFirstTeamValue = false //if uncommented only last selected match gets the first team to score option rest get back to normal
+                                    }
+                                }
                             }
                             .padding(.horizontal, 15)
-                            .padding(.vertical,10)
+                            .padding(.vertical,hasChangesFirstTeamValue ? 7 : 10)
                             .background(Color.blue0D1E62)
                             
                             Divider()
@@ -268,7 +287,7 @@ struct MatchCardView: View {
                                     withAnimation() {
                                         matchCardDetailVM.matchCardDetail.showToast = true
                                         
-                                        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.5) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                             withAnimation {
                                                 matchCardDetailVM.matchCardDetail.showToast = false
                                             }
@@ -296,7 +315,7 @@ struct MatchCardView: View {
                                         .clipShape(Circle())
                                     
                                 }
-                                .padding(.vertical,10)
+                                .padding(.vertical,checkBooster() ? 9 : 10)
                             }
                             .padding(.horizontal, 15)
                             .padding(.bottom, (matchCardDetailVM.matchCardDetail.isFocused1 || matchCardDetailVM.matchCardDetail.isFocused2 && matchCardDetailVM.matchCardDetail.showKeyboard) ? (matchCardDetailVM.matchCardDetail.isSubmitted ? 40 : 0) : 0)
@@ -341,21 +360,13 @@ struct MatchCardView: View {
                 matchCardDetailVM.matchCardDetail.blank2 = matchCardDetailVM.matchCardDetail.savedTeam2Pred
             }
         }
+        .onAppear {
+            matchIDFstTmVw = matchCardDetail?.matchid ?? ""
+        }
         
     }
     
     //MARK: Functions
-    
-    //    func randomPredictionGenerator() {
-    //        for _ in 0..<Int.random(in: 1..<5) {
-    //            let newData = buttonData(
-    //                pred1: Int.random(in: 0..<10),
-    //                pred2: Int.random(in: 0..<10),
-    //                percentage: Int.random(in: 0..<100)
-    //            )
-    //            matchCardDetailVM.matchCardDetail.buttonsData.append(newData)
-    //        }
-    //    }
     
     func checkBooster() -> Bool {
         return sharedData.isBoosterApplied == matchCardDetail?.matchid
@@ -380,7 +391,7 @@ struct MatchCardView: View {
         if !((matchCardDetailVM.matchCardDetail.textFieldText1 == "+") || (matchCardDetailVM.matchCardDetail.textFieldText1 == "")) && !((matchCardDetailVM.matchCardDetail.textFieldText2 == "+") || (matchCardDetailVM.matchCardDetail.textFieldText2 == "")) {
             withAnimation(.easeInOut(duration: 1)) {
                 matchCardDetailVM.matchCardDetail.showToast = true
-                DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     withAnimation(.easeIn(duration: 0.5)) {
                         matchCardDetailVM.matchCardDetail.isSubmitted = true
                         matchCardDetailVM.matchCardDetail.savedTeam1Pred = matchCardDetailVM.matchCardDetail.textFieldText1
@@ -401,7 +412,7 @@ struct MatchCardView: View {
             
         }
         
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             withAnimation {
                 matchCardDetailVM.matchCardDetail.showToast = false
             }
@@ -452,6 +463,8 @@ extension AnyTransition {
 #Preview {
     MatchCardView(matchCardDetail: allMatches.first?.matches?.first, showFirstTeamView: {_,_,_,_  in
         
-    })
+    }, showLastFiveView: {_,_,_ in 
+        
+    }, firstTeamToScore: Binding.constant("Germany"), matchIDFstTmVw: Binding.constant("123"))
         .environmentObject(SharedData())
 }

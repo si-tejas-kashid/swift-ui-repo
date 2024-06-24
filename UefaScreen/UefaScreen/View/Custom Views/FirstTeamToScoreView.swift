@@ -11,8 +11,9 @@ struct FirstTeamToScoreView: View {
     var matchID: String
     var team1: String
     var team2: String
-    @State private var isSelected: String? = ""
+    var none = "None"
     var onDismiss: () -> Void
+    @State private var isSelected: String? = ""
     @State var teamSelected: (String, String) -> ()
     
     var body: some View {
@@ -58,11 +59,13 @@ struct FirstTeamToScoreView: View {
             HStack {
                 VStack {
                     Button (action: {
-                        isSelected = team1
-                        teamSelected(team1,matchID)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            onDismiss()
-                        }
+//                        if isSelected != team1 {
+                            isSelected = team1
+                            teamSelected(team1,matchID)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                onDismiss()
+                            }
+//                        }
                     }) {
                         VStack {
                             ZStack(alignment: .bottomTrailing){
@@ -93,7 +96,7 @@ struct FirstTeamToScoreView: View {
                 
                 VStack {
                     Button (action: {
-                        isSelected = nil
+                        isSelected = none
                         teamSelected(String(),matchID)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             onDismiss()
@@ -130,11 +133,13 @@ struct FirstTeamToScoreView: View {
                 
                 VStack {
                     Button (action: {
-                        isSelected = team2
-                        teamSelected(team2, matchID)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            onDismiss()
-                        }
+//                        if isSelected != team2 {
+                            isSelected = team2
+                            teamSelected(team2, matchID)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                onDismiss()
+                            }
+//                        }
                     }) {
                         VStack {
                             ZStack(alignment: .bottomTrailing){

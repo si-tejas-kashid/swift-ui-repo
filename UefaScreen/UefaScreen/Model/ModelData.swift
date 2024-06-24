@@ -22,7 +22,7 @@ func load<T: Decodable>(_ filename: String) -> T {
     } catch {
         fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
     }
-    printData(data: data)
+//    printData(data: data)
     do {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)
@@ -31,10 +31,10 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
-private func printData(data:Data) {
-    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
+//private func printData(data:Data) {
+//    if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
 //      print(json)
-    } else {
+//    } else {
 //      print("Wrong data")
-    }
-  }
+//    }
+//  }

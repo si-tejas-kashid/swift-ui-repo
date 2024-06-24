@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct LastFiveMatchesView: View {
-    var team1: String? = "GER"
-    var team2: String? = "ITA"
+    var team1: String
+    var team2: String
+    var onDismiss: () -> Void
+    @State var teamSelected: (String, String) -> ()
     @State private var isSelected: String? = ""
     
     var body: some View {
@@ -20,7 +22,7 @@ struct LastFiveMatchesView: View {
                     .padding(.top,5)
                 Spacer()
                 Button(action: {
-                    
+                    onDismiss()
                 }) {
                     Image(systemName: "xmark")
                         .opacity(0.6)
@@ -28,17 +30,24 @@ struct LastFiveMatchesView: View {
                 //                .padding(.top,5)
             }
             .padding(.horizontal,15)
-            .padding(.bottom,15)
+            .padding(.vertical,15)
             
             
             //MARK: Team Options
             HStack {
                 VStack {
-                    HStack {
-                        Image("GER")
+                    HStack{
+                        Image(team1.lowercased())
                             .resizable()
                             .frame(width: 20, height: 20)
-                        Text("Germany")
+                            .clipShape(Circle())
+                            .overlay(
+                                Circle()
+                                    .stroke(lineWidth: 1)
+                                    .background(Color.clear)
+                                    .foregroundColor(Color.greyB2C0C3)
+                            )
+                        Text(team1)
                     }
                     .onTapGesture {
                         isSelected = team1
@@ -52,10 +61,17 @@ struct LastFiveMatchesView: View {
                 
                 VStack {
                     HStack{
-                        Text("Italy")
-                        Image("ITA")
+                        Text(team2)
+                        Image(team2.lowercased())
                             .resizable()
                             .frame(width: 20, height: 20)
+                            .clipShape(Circle())
+                            .overlay(
+                                Circle()
+                                    .stroke(lineWidth: 1)
+                                    .background(Color.clear)
+                                    .foregroundColor(Color.greyB2C0C3)
+                            )
                     }
                     .onTapGesture {
                         isSelected = team2
@@ -93,7 +109,7 @@ struct LastFiveMatchesView: View {
                         
                         VStack(alignment: .leading) {
                             HStack {
-                                Text("Germany 0 - 1 Scotland")
+                                Text("\(isSelected ?? "") \(Int.random(in: 0..<5)) - \(Int.random(in: 0..<5)) Scotland")
                                     .font(.system(size: 16))
                             }
                             .padding(.bottom,-3)
@@ -118,16 +134,22 @@ struct LastFiveMatchesView: View {
             }
             .padding(.leading,15)
         }
-        .frame(width: UIScreen.main.bounds.width, height: 360)
-        .background(Color.blue0D1E62)
-        .foregroundColor(.white)
         .onAppear {
             isSelected = team1
         }
+//        .frame(width: UIScreen.main.bounds.width, height: 360)
+        .background(Color.blue0D1E62)
+        .frame(maxWidth: .infinity)
+        .foregroundColor(.white)
+        
         
     }
 }
 
 #Preview {
-    LastFiveMatchesView()
+    LastFiveMatchesView(team1: "", team2: "", onDismiss: {
+        
+    }, teamSelected: { _,_ in 
+        
+    })
 }

@@ -13,8 +13,10 @@ struct MatchDay: Identifiable {
     var points: Int?
     
     var isSheetPresented = false
-    var team1FstTmVw = String()
-    var team2FstTmVw = String()
+    var isFirstTeamSheetPresented = false
+    var isLastFiveSheetPresented = false
+    var team1SheetVw = String()
+    var team2SheetVw = String()
     var matchIDFstTmVw = String()
     
     func generateRandomMatchDay() -> [MatchDay] {
@@ -42,12 +44,14 @@ struct MatchDays: Codable, Identifiable {
     var id: UUID{ UUID()}
     let title: String?
     let matchDayID: Int?
+    let dateRange: String?
     let points: Int?
     let matches: [Match]?
     var isBoosterApplied: String?
     
     enum CodingKeys: String, CodingKey {
         case matchDayID = "matchday_id"
+        case dateRange = "date_range"
         case title, points, matches
     }
 }
@@ -110,6 +114,7 @@ struct MatchCard: Identifiable {
     var savedTeam2Pred: String = ""  
     var firstTeamSelected: Bool = false
     var firstTeamToScore: String = ""
+    var matchIDFstTmVw = String()
 }
 
 struct buttonData: Identifiable {
