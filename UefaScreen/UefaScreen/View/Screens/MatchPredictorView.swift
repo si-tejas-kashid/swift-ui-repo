@@ -95,23 +95,24 @@ struct MatchPredictorView: View {
                             VStack(spacing:0) {
                                 ForEach(matchdays?[matchdays?.firstIndex(where: { Element in Element.matchDayID == matchPredictorVM.selectedMatchDay}) ?? 0].matches ?? [], id: \.matchid)
                                 { match in
-                                    MatchCardView(matchCardDetail: match, showFirstTeamView: { showFirstTeamView, team1Name, team2Name, matchID in                       withAnimation(.easeInOut(duration: 0.5)) {
-                                        matchPredictorVM.matchDay.isFirstTeamSheetPresented = showFirstTeamView
-                                        matchPredictorVM.matchDay.isSheetPresented = showFirstTeamView
-                                    }
-                                        matchPredictorVM.matchDay.team1SheetVw = team1Name
-                                        matchPredictorVM.matchDay.team2SheetVw = team2Name
-                                        matchPredictorVM.matchDay.matchIDFstTmVw = matchID
-                                    }, showLastFiveView: { showLastFiveView, team1Name, team2Name  in
-                                        matchPredictorVM.matchDay.team1SheetVw = team1Name
-                                        matchPredictorVM.matchDay.team2SheetVw = team2Name
-                                        withAnimation(.easeInOut(duration: 0.5)) {
-                                            matchPredictorVM.matchDay.isLastFiveSheetPresented = showLastFiveView
-                                            matchPredictorVM.matchDay.isSheetPresented = showLastFiveView
-                                        }
-                                        
-                                    }, firstTeamToScore: $matchPredictorVM.matchCardDetail.firstTeamToScore,
-                                                  matchIDFstTmVw: $matchPredictorVM.matchCardDetail.matchIDFstTmVw
+                                    MatchCardView(matchCardDetail: match
+//                                    , showFirstTeamView: { showFirstTeamView, team1Name, team2Name, matchID in                       withAnimation(.easeInOut(duration: 0.5)) {
+//                                        matchPredictorVM.matchDay.isFirstTeamSheetPresented = showFirstTeamView
+//                                        matchPredictorVM.matchDay.isSheetPresented = showFirstTeamView
+//                                    }
+//                                        matchPredictorVM.matchDay.team1SheetVw = team1Name
+//                                        matchPredictorVM.matchDay.team2SheetVw = team2Name
+//                                        matchPredictorVM.matchDay.matchIDFstTmVw = matchID
+//                                    }, showLastFiveView: { showLastFiveView, team1Name, team2Name  in
+//                                        matchPredictorVM.matchDay.team1SheetVw = team1Name
+//                                        matchPredictorVM.matchDay.team2SheetVw = team2Name
+//                                        withAnimation(.easeInOut(duration: 0.5)) {
+//                                            matchPredictorVM.matchDay.isLastFiveSheetPresented = showLastFiveView
+//                                            matchPredictorVM.matchDay.isSheetPresented = showLastFiveView
+//                                        }
+//                                        
+//                                    }, firstTeamToScore: $matchPredictorVM.matchCardDetail.firstTeamToScore,
+//                                                  matchIDFstTmVw: $matchPredictorVM.matchCardDetail.matchIDFstTmVw
                                     )
                                     .clipShape(RoundedRectangle(cornerRadius: 15))
                                     .overlay (

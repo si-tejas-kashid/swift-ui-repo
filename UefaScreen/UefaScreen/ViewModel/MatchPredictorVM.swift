@@ -15,4 +15,5 @@ final class MatchPredictorVM: ObservableObject {
     @Published var selectedMatchDay: Int?
     @Published var matchDays: [MatchDay] = []
     @Published var isBoosterApplied: String?
+    @Published var allMatchDaysArr: [MatchDays] = allMatches
 }

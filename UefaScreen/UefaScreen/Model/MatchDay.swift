@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 struct MatchDay: Identifiable {
     var id = UUID()
     var MatchDayNumber: String?
@@ -93,6 +95,7 @@ struct PopularPrediction: Codable, Identifiable {
 
 
 struct MatchCard: Identifiable {
+    
     var id: Int?
     
     var textFieldText1: String = "+"
@@ -115,6 +118,28 @@ struct MatchCard: Identifiable {
     var firstTeamSelected: Bool = false
     var firstTeamToScore: String = ""
     var matchIDFstTmVw = String()
+    var hasChangesFirstTeamValue : Bool = false
+    
+    
+    //MARK: Functions
+    
+    mutating func onSubmitActions(fromButtons: Bool){
+        if !fromButtons {
+            
+            if blank1.isEmpty {
+                textFieldText1 = "+"
+            } else {
+                textFieldText1 = blank1
+            }
+            
+            if blank2.isEmpty {
+                textFieldText2 = "+"
+            } else {
+                textFieldText2 = blank2
+            }
+        }
+    }
+    
 }
 
 struct buttonData: Identifiable {
