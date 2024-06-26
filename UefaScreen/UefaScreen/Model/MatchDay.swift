@@ -79,9 +79,14 @@ struct Match: Codable, Identifiable {
 }
 
 // MARK: - PopularPrediction
-struct PopularPrediction: Codable, Identifiable {
-    var id = UUID()
+struct PopularPrediction: Codable, Identifiable, Equatable {
+    let id = UUID()
     let team1Prediction, team2Prediction, predictionPercentage: String?
+    var isSelectedPrediction: Bool? = false
+    
+    mutating func markPredictionSelection(value: Bool) {
+        self.isSelectedPrediction = value
+    }
 
     enum CodingKeys: String, CodingKey {
         case team1Prediction = "team1_prediction"

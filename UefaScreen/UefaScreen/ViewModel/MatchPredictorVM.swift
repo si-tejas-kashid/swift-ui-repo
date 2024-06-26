@@ -17,5 +17,12 @@ import Foundation
     
     // Ajinkya
     @Published var allMatchDaysArr: [MatchDays] = allMatches
+    @Published var selectedMatches: [MatchSelectionData] = [] 
     @Published var selectedMatchDay: Int?
+}
+
+
+struct MatchSelectionData {
+    var matchId: String?
+    var selectedPrediction: PopularPrediction? = nil
 }
