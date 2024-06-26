@@ -12,11 +12,11 @@ struct MatchCardView: View {
     var matchCardDetail: Match?
     @StateObject var matchCardDetailVM = MatchPredictorVM()
     @EnvironmentObject var sharedData: SharedData
-//    var showFirstTeamView: (Bool, String, String, String) -> ()
-//    var showLastFiveView: (Bool, String, String) -> ()
-//    @Binding var firstTeamToScore: String
-//    @Binding var matchIDFstTmVw: String
-//    @State var hasChangesFirstTeamValue: Bool = false
+    var showFirstTeamView: (Bool, String, String, String) -> ()
+    var showLastFiveView: (Bool, String, String) -> ()
+    @Binding var firstTeamToScore: String
+    @Binding var matchIDFstTmVw: String
+    @State var hasChangesFirstTeamValue: Bool = false
     
     var body: some View {
         VStack {
@@ -48,7 +48,7 @@ struct MatchCardView: View {
                     HStack{
                         Spacer()
                         Button(action: {
-//                            showLastFiveView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String())
+                            showLastFiveView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String())
                         }) {
                             Image(systemName: "chart.bar.xaxis")
                                 .resizable()
@@ -228,65 +228,65 @@ struct MatchCardView: View {
                             
                             //MARK: First Team To Score Button
                             Button(action: {
-                                //                                print(matchCardDetailVM.matchDay.matchIDFstTmVw)
-//                                showFirstTeamView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String(), matchCardDetail?.matchid ?? String())
-                                //                                    print(matchCardDetailVM.matchDay.matchIDFstTmVw)
-                                //                                    print(firstTeamToScore)
+                                                                print(matchCardDetailVM.matchDay.matchIDFstTmVw)
+                                showFirstTeamView(true, matchCardDetail?.team1Name ?? String(), matchCardDetail?.team2Name ?? String(), matchCardDetail?.matchid ?? String())
+                                                                    print(matchCardDetailVM.matchDay.matchIDFstTmVw)
+                                                                    print(firstTeamToScore)
                             }) {
-//                                HStack {
-//                                    Text(hasChangesFirstTeamValue ? "You Predicted:" : "First team to score")
-//                                        .foregroundColor(.white)
-//                                        .font(.system(size: 15))
-//                                    Text(hasChangesFirstTeamValue ? firstTeamToScore : "")
-//                                        .font(.system(size: 15, weight:.bold))
-//                                    Spacer()
-//                                    
-//                                    if hasChangesFirstTeamValue {
-//                                        Image(hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "")
-//                                            .resizable()
-//                                            .frame(width: 25, height: 25)
-//                                            .clipShape(Circle())
-//                                    } else {
-//                                        Image(systemName: hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "plus.circle")
-//                                            .resizable()
-//                                            .foregroundColor(.yellow)
-//                                            .frame(width: 20, height: 20)
-//                                    }
-//                                }
                                 HStack {
-                                    Text("First team to score")
+                                    Text(hasChangesFirstTeamValue ? "You Predicted:" : "First team to score")
                                         .foregroundColor(.white)
                                         .font(.system(size: 15))
-                                    Text("")
+                                    Text(hasChangesFirstTeamValue ? firstTeamToScore : "")
                                         .font(.system(size: 15, weight:.bold))
                                     Spacer()
                                     
-//                                    if hasChangesFirstTeamValue {
-//                                        Image(hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "")
-//                                            .resizable()
-//                                            .frame(width: 25, height: 25)
-//                                            .clipShape(Circle())
-//                                    } else {
-                                        Image(systemName:/* hasChangesFirstTeamValue ? firstTeamToScore.lowercased() :*/ "plus.circle")
+                                    if hasChangesFirstTeamValue {
+                                        Image(hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "")
+                                            .resizable()
+                                            .frame(width: 25, height: 25)
+                                            .clipShape(Circle())
+                                    } else {
+                                        Image(systemName: hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "plus.circle")
                                             .resizable()
                                             .foregroundColor(.yellow)
                                             .frame(width: 20, height: 20)
-//                                    }
+                                    }
                                 }
-//                                .onChange(of: firstTeamToScore) {newValue in
-//                                    print(matchIDFstTmVw)
-//                                    //                                    print(matchCardDetail?.matchid ?? "")
-//                                    //                                    print(hasChangesFirstTeamValue)     //this variable was true even before assigned true after it comes to the rest views other than the one which is selected
+//                                HStack {
+//                                    Text("First team to score")
+//                                        .foregroundColor(.white)
+//                                        .font(.system(size: 15))
+//                                    Text("")
+//                                        .font(.system(size: 15, weight:.bold))
+//                                    Spacer()
 //                                    
-//                                    if Int(matchIDFstTmVw) == Int(matchCardDetail?.matchid ?? "") {
-//                                        print(matchIDFstTmVw)
-//                                        print(matchCardDetail?.matchid ?? "")
-//                                        hasChangesFirstTeamValue = true
-//                                        
-//                                    } else {
-//                                        //                                        hasChangesFirstTeamValue = false //if uncommented only last selected match gets the first team to score option rest get back to normal
-//                                    }
+////                                    if hasChangesFirstTeamValue {
+////                                        Image(hasChangesFirstTeamValue ? firstTeamToScore.lowercased() : "")
+////                                            .resizable()
+////                                            .frame(width: 25, height: 25)
+////                                            .clipShape(Circle())
+////                                    } else {
+//                                        Image(systemName:/* hasChangesFirstTeamValue ? firstTeamToScore.lowercased() :*/ "plus.circle")
+//                                            .resizable()
+//                                            .foregroundColor(.yellow)
+//                                            .frame(width: 20, height: 20)
+////                                    }
 //                                }
+                                .onChange(of: firstTeamToScore) {newValue in
+                                    print(matchIDFstTmVw)
+                                    //                                    print(matchCardDetail?.matchid ?? "")
+                                    //                                    print(hasChangesFirstTeamValue)     //this variable was true even before assigned true after it comes to the rest views other than the one which is selected
+                                    
+                                    if Int(matchIDFstTmVw) == Int(matchCardDetail?.matchid ?? "") {
+                                        print(matchIDFstTmVw)
+                                        print(matchCardDetail?.matchid ?? "")
+                                        hasChangesFirstTeamValue = true
+                                        
+                                    } else {
+                                                                                hasChangesFirstTeamValue = false //if uncommented only last selected match gets the first team to score option rest get back to normal
+                                    }
+                                }
                             }
                             .padding(.horizontal, 15)
                             .padding(.vertical, 10)
@@ -482,11 +482,11 @@ extension AnyTransition {
 
 #Preview {
     MatchCardView(matchCardDetail: allMatches.first?.matches?.first
-//                  , showFirstTeamView: {_,_,_,_  in
+                  , showFirstTeamView: {_,_,_,_  in
         
-//    }, showLastFiveView: {_,_,_ in
+    }, showLastFiveView: {_,_,_ in
         
-//    }, firstTeamToScore: Binding.constant("Germany"), matchIDFstTmVw: Binding.constant("123")
+    }, firstTeamToScore: Binding.constant("Germany"), matchIDFstTmVw: Binding.constant("123")
     )
     .environmentObject(SharedData())
 }

@@ -7,129 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "396B1D5E-3EDC-4FBA-B72B-63B28176EA33"
+            uuid = "3DE505C1-30DB-42DA-A39F-B8C831003126"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardViewEnhanced.swift"
+            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "414"
-            endingLineNumber = "414"
-            landmarkName = "onSubmitActions(fromButtons:)"
-            landmarkType = "7">
+            startingLineNumber = "491"
+            endingLineNumber = "491"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8483AEAA-FCAE-4B7D-9934-CABE7C23BE96"
+            uuid = "930173CB-2780-46CA-B05C-362CADAAF409"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardViewEnhanced.swift"
+            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
-            landmarkName = "onSubmitActions(fromButtons:)"
-            landmarkType = "7">
+            startingLineNumber = "485"
+            endingLineNumber = "485"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9698A49A-BD29-4E90-A49F-1276B6CB5812"
+            uuid = "91CAFF0E-E9FA-4709-BD6C-6BD80FB6DD1B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardViewEnhanced.swift"
+            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
-            landmarkName = "enterTextInTextFields(withNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EE2004F3-B704-42D7-A77A-92CAA7BF4B69"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardViewEnhanced.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "400"
-            endingLineNumber = "400"
-            landmarkName = "enterTextInTextFields(withNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "90D7723C-9DEA-4ED8-B0F4-8A8F752A15C0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardViewEnhanced.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "421"
-            endingLineNumber = "421"
-            landmarkName = "onSubmitActions(fromButtons:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "59746E26-F0DC-4A41-B053-968CA11B947A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardViewEnhanced.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
-            landmarkName = "onSubmitActions(fromButtons:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "59746E26-F0DC-4A41-B053-968CA11B947A - 74797352d058f1f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in UefaScreen.MatchCardViewEnhanced.onSubmitActions(fromButtons: Swift.Bool) -&gt; ()"
-                  moduleName = "UefaScreen"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/View/Custom%20Views/MatchCardViewEnhanced.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "425"
-                  endingLineNumber = "425"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "59746E26-F0DC-4A41-B053-968CA11B947A - b64b192b72ebc034"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in UefaScreen.MatchCardViewEnhanced.onSubmitActions(fromButtons: Swift.Bool) -&gt; ()"
-                  moduleName = "UefaScreen"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/View/Custom%20Views/MatchCardViewEnhanced.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "426"
-                  endingLineNumber = "426"
-                  offsetFromSymbolStart = "200">
-               </Location>
-            </Locations>
+            startingLineNumber = "497"
+            endingLineNumber = "497">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
