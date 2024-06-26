@@ -31,6 +31,7 @@
 		18C612FD2C231C31002D1B4C /* MatchData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18C612FC2C231C31002D1B4C /* MatchData.json */; };
 		18C612FF2C24718C002D1B4C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C612FE2C24718C002D1B4C /* ModelData.swift */; };
 		2987A35D2C2A0ACE00098B9B /* MatchPredictorViewEnhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2987A35C2C2A0ACE00098B9B /* MatchPredictorViewEnhanced.swift */; };
+		2987A35F2C2ABF6000098B9B /* MatchCardViewEnhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2987A35E2C2ABF6000098B9B /* MatchCardViewEnhanced.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		18C612FC2C231C31002D1B4C /* MatchData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MatchData.json; sourceTree = "<group>"; };
 		18C612FE2C24718C002D1B4C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		2987A35C2C2A0ACE00098B9B /* MatchPredictorViewEnhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredictorViewEnhanced.swift; sourceTree = "<group>"; };
+		2987A35E2C2ABF6000098B9B /* MatchCardViewEnhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCardViewEnhanced.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				18B2EB022C10B2E70025AF79 /* CustomKeyboard.swift */,
 				18B2EB062C1744950025AF79 /* FirstTeamToScoreView.swift */,
 				18B2EB082C1839CC0025AF79 /* LastFiveMatchesView.swift */,
+				2987A35E2C2ABF6000098B9B /* MatchCardViewEnhanced.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				18B2EAEF2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift in Sources */,
 				18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */,
 				18B2EB032C10B2E70025AF79 /* CustomKeyboard.swift in Sources */,
+				2987A35F2C2ABF6000098B9B /* MatchCardViewEnhanced.swift in Sources */,
 				18B2EAF52C0EE6E20025AF79 /* ShareLeagueView.swift in Sources */,
 				189727A52C2612B400534683 /* SharedData.swift in Sources */,
 				18B2EB012C104FEA0025AF79 /* Binding + Ext.swift in Sources */,

@@ -16,6 +16,13 @@ struct MatchPredictorViewEnhanced: View {
                 ScrollView {
                     MatchPredictorMenuSelectionView(viewModel: viewModel)
                     MatchPredictorShareView(viewModel: viewModel)
+                    
+                    if let selectedMatchDay = viewModel.allMatchDaysArr.first(where: {$0.matchDayID == viewModel.selectedMatchDay}) {
+                        ForEach(selectedMatchDay.matches ?? []) { matchDetails in
+                            MatchCardViewEnhanced(matchDetails: matchDetails)
+                        }
+                    }
+                    
                 }
             }
         }
@@ -28,6 +35,7 @@ struct MatchPredictorViewEnhanced: View {
         .onAppear {
             viewModel.selectedMatchDay = viewModel.allMatchDaysArr.first?.matchDayID
         }
+        .environmentObject(viewModel)
     }
 }
 
