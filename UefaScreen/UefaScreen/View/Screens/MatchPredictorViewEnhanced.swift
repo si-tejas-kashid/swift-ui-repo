@@ -134,7 +134,7 @@ struct MatchPredictorMatchCardView: View {
         if let selectedMatchIndex = viewModel.allMatchDaysArr.firstIndex(where: {$0.matchDayID == viewModel.selectedMatchDay}) {
             
             ForEach(viewModel.allMatchDaysArr[selectedMatchIndex].matches ?? [], id:\.matchid) {match in
-                MatchCardViewEnhanced(match: match)
+//                MatchCardViewEnhanced(match: match)
                 
             }
         }

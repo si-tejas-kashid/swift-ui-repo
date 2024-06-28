@@ -7,47 +7,186 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3DE505C1-30DB-42DA-A39F-B8C831003126"
+            uuid = "30B500FC-C7C2-4571-8762-64202A90A181"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
+            filePath = "UefaScreen/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "491"
-            endingLineNumber = "491"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "930173CB-2780-46CA-B05C-362CADAAF409"
+            uuid = "1A387FE4-70AB-4F69-8AAA-B459B3398A8F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
+            filePath = "UefaScreen/View/Screens/MatchPredictorView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "485"
-            endingLineNumber = "485"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "91CAFF0E-E9FA-4709-BD6C-6BD80FB6DD1B"
+            uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UefaScreen/View/Custom Views/MatchCardView.swift"
+            filePath = "UefaScreen/Model/SharedData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "497"
-            endingLineNumber = "497">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "SharedData"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - 3ac3fbe1115069e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of UefaScreen.SharedData.orientation : __C.UIDeviceOrientation"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/Model/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - efeeecbf52826fd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.orientation.getter : __C.UIDeviceOrientation"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/Model/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - ad6e1baaa386d413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.orientation.setter : __C.UIDeviceOrientation"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/Model/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - b3e5b3a0c0e9ef4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.orientation.modify : __C.UIDeviceOrientation"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/Model/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - 7194dc9e8a40c8bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.orientation.modify : __C.UIDeviceOrientation with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - 2cfdd1fa09485791"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.$orientation.getter : Combine.Published&lt;__C.UIDeviceOrientation&gt;.Publisher"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/UefaScreen/Model/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - 3f9d1cfb77759774"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.$orientation.setter : Combine.Published&lt;__C.UIDeviceOrientation&gt;.Publisher"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - e7d72db9852a888a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.$orientation.modify : Combine.Published&lt;__C.UIDeviceOrientation&gt;.Publisher"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "0A3811DA-5C6D-4376-ADD6-EEF919FE123A - 110a647ed8c6c643"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UefaScreen.SharedData.$orientation.modify : Combine.Published&lt;__C.UIDeviceOrientation&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "UefaScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaskashid/Documents/Swift%20UI%20Projects/UefaScreen/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

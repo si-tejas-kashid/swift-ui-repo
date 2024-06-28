@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var sharedData: SharedData
+    
     var body: some View {
         MatchPredictorView(matchdays: allMatches)
-//        StickyViewTrial(matchdays: allMatches)
-        
-//        MatchCardView(matchCardDetail: allMatches.first?.matches?.first, boosterApplied: {booster in })
-        
-//        MatchPredictorViewEnhanced()
+            .onAppear{
+                sharedData.orientation = UIDevice.current.orientation
+            }
+            .onRotate { UIDeviceOrientation in
+                sharedData.orientation = UIDeviceOrientation
+            }
     }
 }
 

@@ -20,8 +20,12 @@ struct CustomKeyboard: View {
                         Button(action: {
                             currentEnteredValue("\(number)")
                         }) {
-                            Text("\(number)")
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            HStack{
+                                Spacer()
+                                Text("\(number)")
+                                Spacer()
+                            }
+//                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .background(Color.white)
                                 .foregroundColor(Color("grey000D40").opacity(0.8))
                                     .cornerRadius(10)
@@ -42,16 +46,23 @@ struct CustomKeyboard: View {
                     // Vacant left corner
                     Button(action: {
                     }) {
-                        Text("")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        HStack{
+                            Spacer()
+                            Text("")
+                            Spacer()
+                        }
                     }
                     .hidden()
                     
                     Button(action: {
                         currentEnteredValue("0")
                     }) {
-                        Text("0")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        HStack{
+                            Spacer()
+                            Text("0")
+                            Spacer()
+                        }
+//                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(Color.white)
                             .foregroundColor(Color("grey000D40").opacity(0.8))
                             .cornerRadius(10)
@@ -65,8 +76,12 @@ struct CustomKeyboard: View {
                     Button(action: {
                         currentEnteredValue("")
                     }) {
-                        Image(systemName: "delete.left")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        HStack{
+                            Spacer()
+                            Image(systemName: "delete.left")
+                            Spacer()
+                        }
+//                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .foregroundColor(Color("grey000D40").opacity(0.6))
                             .cornerRadius(10)
                             .font(.title2)
@@ -76,9 +91,10 @@ struct CustomKeyboard: View {
                             x: 0,
                             y: 11)
                 }
-                .padding(.horizontal,10)
+                .padding(.vertical,1)
+                .padding(.horizontal,5)
             }
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/4.5, alignment: .center)
+//            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/4.5, alignment: .center)
             .padding(10)
             .background(Color.greyF3F4FC)
         }

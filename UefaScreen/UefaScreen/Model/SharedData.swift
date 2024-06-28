@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 class SharedData: ObservableObject {
-    @Published var isBoosterApplied = ""
+    @Published var orientation: UIDeviceOrientation = UIDeviceOrientation.portrait
 }

@@ -10,7 +10,9 @@
 		1851CC9E2C23097800FFB3F0 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851CC9D2C23097800FFB3F0 /* RoundedCorner.swift */; };
 		187992A12C2AD96D001CADD7 /* MatchPredictorViewEnhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187992A02C2AD96D001CADD7 /* MatchPredictorViewEnhanced.swift */; };
 		187992A32C2AD9F0001CADD7 /* MatchCardViewEnhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187992A22C2AD9F0001CADD7 /* MatchCardViewEnhanced.swift */; };
-		189727A52C2612B400534683 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189727A42C2612B400534683 /* SharedData.swift */; };
+		189F04432C2EBC7D00EFD300 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F04422C2EBC7D00EFD300 /* SwiftUIView.swift */; };
+		189F04452C2EEA0200EFD300 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F04442C2EEA0200EFD300 /* DeviceRotationViewModifier.swift */; };
+		189F04472C2EED3700EFD300 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F04462C2EED3700EFD300 /* SharedData.swift */; };
 		18B2EADD2C09EB650025AF79 /* UefaScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EADC2C09EB650025AF79 /* UefaScreenApp.swift */; };
 		18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2EADE2C09EB650025AF79 /* ContentView.swift */; };
 		18B2EAE12C09EB670025AF79 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B2EAE02C09EB670025AF79 /* ImageAssets.xcassets */; };
@@ -38,7 +40,9 @@
 		1851CC9D2C23097800FFB3F0 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		187992A02C2AD96D001CADD7 /* MatchPredictorViewEnhanced.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPredictorViewEnhanced.swift; sourceTree = "<group>"; };
 		187992A22C2AD9F0001CADD7 /* MatchCardViewEnhanced.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCardViewEnhanced.swift; sourceTree = "<group>"; };
-		189727A42C2612B400534683 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		189F04422C2EBC7D00EFD300 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		189F04442C2EEA0200EFD300 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
+		189F04462C2EED3700EFD300 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		18B2EAD92C09EB650025AF79 /* UefaScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UefaScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B2EADC2C09EB650025AF79 /* UefaScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UefaScreenApp.swift; sourceTree = "<group>"; };
 		18B2EADE2C09EB650025AF79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				18B2EAF42C0EE6E20025AF79 /* ShareLeagueView.swift */,
 				187992A02C2AD96D001CADD7 /* MatchPredictorViewEnhanced.swift */,
 				18B2EAF92C0F27EA0025AF79 /* MatchPredictorView.swift */,
+				189F04422C2EBC7D00EFD300 /* SwiftUIView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -188,7 +193,7 @@
 			children = (
 				18C4A4DA2C2027BF00884EBB /* MatchDay.swift */,
 				18C612FE2C24718C002D1B4C /* ModelData.swift */,
-				189727A42C2612B400534683 /* SharedData.swift */,
+				189F04462C2EED3700EFD300 /* SharedData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				18C4A4DF2C206ACC00884EBB /* TextFieldFocusedState.swift */,
+				189F04442C2EEA0200EFD300 /* DeviceRotationViewModifier.swift */,
 				1851CC9D2C23097800FFB3F0 /* RoundedCorner.swift */,
 			);
 			path = Helpers;
@@ -284,14 +290,15 @@
 			files = (
 				18C4A4DB2C2027BF00884EBB /* MatchDay.swift in Sources */,
 				18B2EAFA2C0F27EA0025AF79 /* MatchPredictorView.swift in Sources */,
+				189F04452C2EEA0200EFD300 /* DeviceRotationViewModifier.swift in Sources */,
 				18C612FF2C24718C002D1B4C /* ModelData.swift in Sources */,
 				18C4A4E02C206ACC00884EBB /* TextFieldFocusedState.swift in Sources */,
 				18B2EAEF2C0DB5950025AF79 /* ButtonHorizontalAndColored.swift in Sources */,
 				18B2EB072C1744950025AF79 /* FirstTeamToScoreView.swift in Sources */,
 				18B2EB032C10B2E70025AF79 /* CustomKeyboard.swift in Sources */,
 				187992A32C2AD9F0001CADD7 /* MatchCardViewEnhanced.swift in Sources */,
+				189F04432C2EBC7D00EFD300 /* SwiftUIView.swift in Sources */,
 				18B2EAF52C0EE6E20025AF79 /* ShareLeagueView.swift in Sources */,
-				189727A52C2612B400534683 /* SharedData.swift in Sources */,
 				18B2EB012C104FEA0025AF79 /* Binding + Ext.swift in Sources */,
 				187992A12C2AD96D001CADD7 /* MatchPredictorViewEnhanced.swift in Sources */,
 				18C4A4D62C201E7E00884EBB /* MatchCardVM.swift in Sources */,
@@ -299,6 +306,7 @@
 				18B2EAF12C0DD3800025AF79 /* NavigationBarModifier.swift in Sources */,
 				1851CC9E2C23097800FFB3F0 /* RoundedCorner.swift in Sources */,
 				18C4A4DD2C20288600884EBB /* MatchPredictorVM.swift in Sources */,
+				189F04472C2EED3700EFD300 /* SharedData.swift in Sources */,
 				18B2EADF2C09EB650025AF79 /* ContentView.swift in Sources */,
 				18B2EAED2C0DB27C0025AF79 /* ButtonsWithBelowText.swift in Sources */,
 				18B2EADD2C09EB650025AF79 /* UefaScreenApp.swift in Sources */,
